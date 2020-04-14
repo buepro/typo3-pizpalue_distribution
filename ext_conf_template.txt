@@ -1,0 +1,6 @@
+#=========================================================#
+# Installation
+#=========================================================#
+
+# cat=Installation; type=boolean; label=LLL:EXT:pizpalue_distribution/Resources/Private/Language/Backend.xlf:ext_conf.installCustomerExtension
+installCustomerExtension = 1

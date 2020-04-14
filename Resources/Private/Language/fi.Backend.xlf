@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2020-04-07T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="ext_conf.installCustomerExtension" approved="yes">
+				<source>Install customer extension</source>
+				<target state="translated">Asenna pizpalue asiakaslaajennuksen kanssa</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
