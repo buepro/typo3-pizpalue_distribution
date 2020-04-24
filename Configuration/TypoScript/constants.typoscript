@@ -1,0 +1,6 @@
+page.logo {
+    file = EXT:pizpalue_distribution/Resources/Public/Images/logo.svg
+    fileInverted = EXT:pizpalue_distribution/Resources/Public/Images/logo_inv.svg
+    height = 140
+    width = 390
+}
