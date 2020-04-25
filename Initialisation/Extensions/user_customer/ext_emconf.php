@@ -9,7 +9,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'Customer template',
-    'description'      => 'Customer template used with distribution pizpalue',
+    'description'      => 'Customer template used with template pizpalue',
     'category'         => 'templates',
     'author'           => 'Roman Büchler',
     'author_email'     => 'rb@buechler.pro',
@@ -18,7 +18,7 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder'     => '0',
     'createDirs'       => '',
     'clearCacheOnLoad' => 0,
-    'version'          => '11.1.2',
+    'version'          => '11.1.3',
     'constraints'      => [
         'depends'   => [
             'typo3'         => '9.5.0-10.99.99'

@@ -1,11 +1,12 @@
 # TYPO3 user_customer
 
-[![Latest Version](https://badgen.net/packagist/v/buepro/typo3-user_customer)](https://github.com/buepro/typo3-user_customer/releases)
+[![Latest Version](https://badgen.net/packagist/v/buepro/typo3-user-customer)](https://github.com/buepro/typo3-user_customer/releases)
 [![Extension repository](https://badgen.net/badge/TYPO3/pizpalue/orange)](https://extensions.typo3.org/extension/pizpalue/)
+[![Extension repository](https://badgen.net/badge/TYPO3/pizpalue%20distribution/orange)](https://extensions.typo3.org/extension/pizpalue_distribution/)
 
 ---
 
-This extension serves as a base to customize a TYPO3-website using the distribution 
+This extension serves as a base to customize a TYPO3-website using the template 
 [pizpalue](https://github.com/buepro/typo3-pizpalue).
 
 ## Usage

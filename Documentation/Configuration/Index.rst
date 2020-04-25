@@ -44,29 +44,6 @@ the following code might be used in `typo3conf/AdditionalConfiguration.php`:
 Site configuration
 ==================
 
-Since TYPO3 V10 the distribution installs a default site configuration.
-
-You might need to adjust the settings for the "Error Handling" as well as for the extension "news" by editing
-the configuration file (``typo3conf/sites/default/config.yaml``). Have a look at the following:
-
-.. code-block:: yaml
-
-   errorContentSource: 't3://page?uid=87' #change this: the number after "uid=" reflects the uid from the 404-page
-
-.. code-block:: yaml
-
-   routeEnhancers:
-      NewsPluginDetail:
-         type: Extbase
-         limitToPages:
-            - 95 #change this: the number reflects the uid from the news detail page
-
-.. code-block:: yaml
-
-   routeEnhancers:
-      #...
-      NewsPluginList:
-         type: Extbase
-         limitToPages:
-            - 96 #change this: the number reflects the uid from the news list page
+A default site configuration is delivered with the extension user_customer and can be found under
+`typo3conf/ext/pizpalue_distribution/Initialisation/Extensions/user_customer/Initialisation/Site/default/config.yaml`.
 

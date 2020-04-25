@@ -12,6 +12,7 @@ namespace Buepro\UserCustomer\Slot;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 
 class ExtensionInstallUtility
 {
@@ -19,23 +20,24 @@ class ExtensionInstallUtility
      * Copies the default site configuration delivered with the extension to the site configuration directory.
      * Just copies the default site configuration in case no site configuration exists.
      *
-     * @return bool false if default site config couldn't be copied
+     * @return bool true if default site config could be copied
+     * @todo Can be removed when using at least TYPO3 10
      */
     private function copyDefaultSiteConfig()
     {
+        $source = Environment::getPublicPath() . '/typo3conf/ext/user_customer/Initialisation/Site/default';
         $destination = Environment::getPublicPath() . '/typo3conf/sites/default';
-        // Checks if a site configuration exists
-        if (!glob(Environment::getPublicPath() . '/typo3conf/sites/*', GLOB_ONLYDIR)) {
-            // Copies the default site configuration
-            GeneralUtility::copyDirectory(
-                'typo3conf/ext/user_customer/Resources/Private/FolderStructureTemplateFiles/sites',
-                $destination
-            );
-            if (!file_exists($destination)) {
-                return false;
-            }
+        if (!file_exists($source)) {
+            return false;
         }
-        return true;
+        if (!file_exists($destination)) {
+            GeneralUtility::copyDirectory($source, $destination);
+            if (file_exists($destination)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
 
     /**
@@ -70,9 +72,13 @@ class ExtensionInstallUtility
             return;
         }
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
-        if ($extensionConfiguration->get('user_customer', 'addSiteConfiguration')) {
-            $this->copyDefaultSiteConfig();
+        // Add default site configuration
+        if (VersionNumberUtility::convertVersionNumberToInteger(VersionNumberUtility::getCurrentTypo3Version()) < 10000000) {
+            if ($extensionConfiguration->get('user_customer', 'addSiteConfiguration')) {
+                $this->copyDefaultSiteConfig();
+            }
         }
+        // Add default `AdditionalConfiguration.php`
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
         if ($extensionConfiguration->get('user_customer', 'addAdditionalConfiguration')) {
             $this->copyAdditionalConfiguration();
