@@ -27,7 +27,7 @@ the following code might be used in `typo3conf/AdditionalConfiguration.php`:
 
 .. code-block:: php
 
-   if (in_array(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext(), ['Production','Production/Staging'])) {
+   if (\TYPO3\CMS\Core\Core\Environment::getContext()->isProduction()) {
        // Removes the default writer configurations
        $GLOBALS['TYPO3_CONF_VARS']['LOG']['writerConfiguration'] = [];
        // Removes the writer configuration for depreciation log
