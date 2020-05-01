@@ -93,7 +93,7 @@ page {
     }
 }
 
-[treeLevel = 0]
+[tree.level == 0]
     page {
         theme {
             navigation {
