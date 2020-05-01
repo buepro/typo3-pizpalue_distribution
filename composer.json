@@ -26,8 +26,8 @@
     ],
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "typo3/cms-core": "^9.5",
-        "typo3/cms-impexp": "^9.5",
+        "typo3/cms-core": "^10.4",
+        "typo3/cms-impexp": "^10.4",
         "buepro/typo3-pizpalue": "^11.0",
         "buepro/typo3-pp-gridelements": "^1.0.0",
         "bo/slickcarousel": "^3.0.3",
