@@ -1,6 +1,6 @@
 # Release
 
-1. Update extension user_customer
+1. Update extension user_pizpalue
 1. Update data base resources (Initialization/data.*)
 1. Update documentation
 1. Update installation section in administrator documentation (supported extensions, composer)

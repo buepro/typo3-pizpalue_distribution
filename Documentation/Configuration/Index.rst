@@ -44,6 +44,6 @@ the following code might be used in `typo3conf/AdditionalConfiguration.php`:
 Site configuration
 ==================
 
-A default site configuration is delivered with the extension user_customer and can be found under
-`typo3conf/ext/pizpalue_distribution/Initialisation/Extensions/user_customer/Initialisation/Site/default/config.yaml`.
+A default site configuration is delivered with the extension user_pizpalue and can be found under
+`typo3conf/ext/pizpalue_distribution/Initialisation/Extensions/user_pizpalue/Initialisation/Site/default/config.yaml`.
 

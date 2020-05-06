@@ -4,8 +4,8 @@
 		  product-name="pizpalue_distribution">
 		<header/>
 		<body>
-			<trans-unit id="ext_conf.installCustomerExtension">
-				<source>Install customer extension</source>
+			<trans-unit id="ext_conf.installUserExtension">
+				<source>Install user extension</source>
 			</trans-unit>
 		</body>
 	</file>

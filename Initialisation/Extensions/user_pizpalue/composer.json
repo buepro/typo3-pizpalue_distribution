@@ -1,0 +1,40 @@
+{
+  "name": "buepro/typo3-user-pizpalue",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 Custom template being used with template pizpalue.",
+  "keywords": [
+    "TYPO3 CMS",
+    "bootstrap",
+    "pizpalue",
+    "responsive",
+    "frontend",
+    "theme",
+    "web"
+  ],
+  "homepage": "https://github.com/buepro/typo3-user_pizpalue",
+  "authors": [
+    {
+      "name": "Roman Büchler",
+      "email": "rb@buechler.pro",
+      "homepage": "https://www.buechler.pro/",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "typo3/cms-core": ">=10.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Buepro\\UserPizpalue\\": "Classes"
+    }
+  },
+  "replace": {
+    "buepro/typo3-user-pizpalue": "self.version"
+  },
+  "extra": {
+    "typo3/cms": {
+        "extension-key": "user_pizpalue"
+    }
+  }
+}

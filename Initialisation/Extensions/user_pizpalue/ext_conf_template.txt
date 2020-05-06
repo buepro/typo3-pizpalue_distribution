@@ -1,0 +1,6 @@
+#=========================================================#
+# Installation
+#=========================================================#
+
+# cat=Installation; type=boolean; label=LLL:EXT:user_pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.addAdditionalConfiguration
+addAdditionalConfiguration = 1

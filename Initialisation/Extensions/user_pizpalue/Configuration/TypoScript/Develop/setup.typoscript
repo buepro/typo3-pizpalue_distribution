@@ -1,0 +1,7 @@
+#=========================================================#
+# Page object
+#=========================================================#
+
+page {
+   includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
+}

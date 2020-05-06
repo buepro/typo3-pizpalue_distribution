@@ -109,7 +109,7 @@ After the distribution has been added install it in the extension manager.
 Customization
 =============
 
-The suggested way to customize the distribution for customer projects is to create an extension (e.g. user_customer)
+The suggested way to customize the distribution for customer projects is to create an extension (e.g. user_pizpalue)
 and define the customer theme and functions in it (`see TYPO3 documentation
 <https://docs.typo3.org/typo3cms/ExtbaseFluidBook/4-FirstExtension/Index.html>`__).
 
@@ -122,5 +122,5 @@ starting point.
    Customize the distribution for customer projects
 
 The extension might be deactivated by removing its static template or by uninstalling it. To prevent the extension
-``user_customer`` from being installed the checkbox ``Install customer extension`` in the ``Extension
+``user_pizpalue`` from being installed the checkbox ``Install customer extension`` in the ``Extension
 Configuration`` from the settings module might be deactivated.

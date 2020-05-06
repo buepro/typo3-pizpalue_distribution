@@ -12,16 +12,16 @@ class ExtensionInstallUtility
 {
 
     /**
-     * Installs the extension user_customer. In case it isn't available under typo3conf/ext it will be copied from
+     * Installs the extension user_pizpalue. In case it isn't available under typo3conf/ext it will be copied from
      * the folder EXT:pizpalue_distribution/Initialisation/Extensions/
      *
-     * @return bool true if extension user_customer could be installed
+     * @return bool true if extension user_pizpalue could be installed
      * @throws \TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException
      */
-    private function installCustomerExtension()
+    private function installUserExtension()
     {
-        $source = Environment::getPublicPath() . '/typo3conf/ext/pizpalue_distribution/Initialisation/Extensions/user_customer';
-        $destination = Environment::getPublicPath() . '/typo3conf/ext/user_customer';
+        $source = Environment::getPublicPath() . '/typo3conf/ext/pizpalue_distribution/Initialisation/Extensions/user_pizpalue';
+        $destination = Environment::getPublicPath() . '/typo3conf/ext/user_pizpalue';
         if (!file_exists($source)) {
             return false;
         }
@@ -32,15 +32,15 @@ class ExtensionInstallUtility
             }
         }
         $installUtility = GeneralUtility::makeInstance(InstallUtility::class);
-        if (!$installUtility->isLoaded('user_customer')) {
+        if (!$installUtility->isLoaded('user_pizpalue')) {
             $installUtility->reloadAvailableExtensions();
-            $installUtility->install('user_customer');
+            $installUtility->install('user_pizpalue');
         }
-        return $installUtility->isLoaded('user_customer');
+        return $installUtility->isLoaded('user_pizpalue');
     }
 
     /**
-     * Handles the installation from the extension user_customer as well as the copying from a default
+     * Handles the installation from the extension user_pizpalue as well as the copying from a default
      * site configuration.
      *
      * @param $extensionKey
@@ -54,8 +54,8 @@ class ExtensionInstallUtility
             return;
         }
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
-        if ($extensionConfiguration->get('pizpalue_distribution', 'installCustomerExtension')) {
-            $this->installCustomerExtension();
+        if ($extensionConfiguration->get('pizpalue_distribution', 'installUserExtension')) {
+            $this->installUserExtension();
         }
     }
 }
