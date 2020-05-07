@@ -24,8 +24,6 @@ Extension                        Version
 ================================ ================
 pizpalue                         11.0.2-11.99.99
 pp_gridelements                  1.0.0-1.99.99
-slickcarousel                    3.0.3-3.99.99
-ws_flexslider                    1.5.12-1.99.99
 ================================ ================
 
 Supported extensions
@@ -41,6 +39,8 @@ indexed_search                   9.5.14-9.5.99
 news                             7.3.1-7.99.99
 tt_address                       5.0.0-5.99.99
 timelog                          1.5.3-1.99.99
+slickcarousel                    3.0.3-3.99.99
+ws_flexslider                    1.5.12-1.99.99
 ================================ ================
 
 .. note::

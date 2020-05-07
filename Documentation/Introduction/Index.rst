@@ -25,8 +25,6 @@ new features and complements other extensions.
 The following extensions complement this distribution:
 
 - `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__, structure elements
-- `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__, carousel
-- `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__, carousel
 
 Additional features are ready to be used and just need to be activated by installing the related extension:
 
@@ -35,6 +33,8 @@ Additional features are ready to be used and just need to be activated by instal
 - `indexed_search <https://docs.typo3.org/c/typo3/cms-indexed-search/master/en-us/>`__, website search
 - `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__, structure elements
 - `timelog <https://extensions.typo3.org/extension/timelog>`__, time and activity registration for projects
+- `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__, carousel
+- `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__, carousel
 
 Discover the functionality by browsing through the `demo site <https://www.pizpalue.buechler.pro/>`__.
 
