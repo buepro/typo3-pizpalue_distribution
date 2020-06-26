@@ -1,6 +1,11 @@
 <?php
 
-
+/*
+ * This file is part of the package buepro/pizpalue_distribution.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'Pizpalue distribution',
@@ -14,8 +19,8 @@ $EM_CONF[$_EXTKEY] = [
     'constraints'      => [
         'depends'   => [
             'typo3'                 => '10.4.0-10.4.99',
-            'pizpalue'              => '11.0.2-11.99.99',
-            'pp_gridelements'       => '1.0.0-1.99.99',
+            'pizpalue'              => '11.2.0-11.99.99',
+            'pp_gridelements'       => '1.1.0-1.99.99',
         ],
         'conflicts' => [],
         'suggests'  => [],

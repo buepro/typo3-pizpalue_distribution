@@ -1,19 +1,57 @@
 # TYPO3 user_pizpalue
 
-[![Extension repository](https://badgen.net/badge/TYPO3/pizpalue/orange)](https://extensions.typo3.org/extension/pizpalue/)
-[![Extension repository](https://badgen.net/badge/TYPO3/pizpalue%20distribution/orange)](https://extensions.typo3.org/extension/pizpalue_distribution/)
+[![Extension pizpalue](https://badgen.net/badge/TYPO3/pizpalue/orange)](https://extensions.typo3.org/extension/pizpalue/)
+[![Extension pizpalue_distribution](https://badgen.net/badge/TYPO3/pizpalue%20distribution/orange)](https://extensions.typo3.org/extension/pizpalue_distribution/)
 
 ---
 
-This extension serves as a base to customize a TYPO3-website using the template 
+This extension serves as a base to customize a TYPO3-website using the template
 [pizpalue](https://github.com/buepro/typo3-pizpalue).
+
+## Composer
+
+To use the extension in a composer environment different approaches are available. Following two ways are
+further outlined:
+
+### Without version control
+
+1. Don't add `buepro/typor-user-pizpalue` as a requirement to the composer configuration
+1. Copy the extension manually to the extension directory (`typo3conf/ext/user_pizpalue`)
+1. Add the following autoload declaration to the composer configuration from the web site:
+   ```
+   "autoload": {
+        "psr-4": {
+            "Buepro\\UserPizpalue\\": "public/typo3conf/ext/user_pizpalue/Classes/"
+        }
+    }
+   ```
+1. Run `composer dumpautoload` to generate the autoload info
+
+### With version control
+
+1. Add your repository to the composer configuration from the web site:
+   ```
+   "repositories": [
+       {
+            "type": "vcs",
+            "url": "https://user@domain.ch/path_to_git/typo3-user-pizpalue.git"
+       }
+   ],
+   ```
+1. Update the require section from the composer configuration from the web site:
+   ```
+   "require": {
+       "buepro/typo3-user-pizpalue": "dev-mybranch",
+   }
+   ```
+1. Run `composer update`
 
 ## Usage
 
-When starting a new project create a new git-branch and just commit to that branch. The master branch should always 
+When starting a new project create a new git-branch and just commit to that branch. The master branch should always
 be used to start new projects.
 
-To increase quality work progress might be committed and documented. Documentation has its home in the folder 
+To increase quality work progress might be committed and documented. Documentation has its home in the folder
 [`Documentation`](Documentation). A changelog can be created with the following steps:
 
 1. In a shell go to the `Build` directory
@@ -24,11 +62,11 @@ To increase quality work progress might be committed and documented. Documentati
 
 ### TypoScript (TS)
 
-Customizations typically start by adapting the [ts constants](Configuration/TypoScript/constants.typoscript) and 
+Customizations typically start by adapting the [ts constants](Configuration/TypoScript/constants.typoscript) and
 [ts setup](Configuration/TypoScript/setup.typoscript). Frequently used configurations are collected
-in the folder [`Configuration/TypoScript/Default`](Configuration/TypoScript/Default). You might use them to get started 
-by copying the needed fragments to 
-[`Configuration/TypoScript/constants.typoscript`](Configuration/TypoScript/constants.typoscript) or 
+in the folder [`Configuration/TypoScript/Default`](Configuration/TypoScript/Default). You might use them to get started
+by copying the needed fragments to
+[`Configuration/TypoScript/constants.typoscript`](Configuration/TypoScript/constants.typoscript) or
 [`Configuration/TypoScript/setup.typoscript`](Configuration/TypoScript/setup.typoscript). The inclusion from the default
 TS (see `<INCLUDE_TYPOSCRIPT...`) might be deleted.
 
@@ -73,7 +111,7 @@ the graphic defined by `custom1.svg`.
 
 ### Layouts/Templates/Partials
 
-They are maintained in [`Resources/Private`](Resources/Private). As an example to add a new page template follow these 
+They are maintained in [`Resources/Private`](Resources/Private). As an example to add a new page template follow these
 steps:
 
 1. Create the template in the directory [`Resources/Private/Templates/Page`](Resources/Private/Templates/Page)

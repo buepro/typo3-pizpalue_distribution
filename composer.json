@@ -30,8 +30,8 @@
     "require": {
         "typo3/cms-core": "^10.4",
         "typo3/cms-impexp": "^10.4",
-        "buepro/typo3-pizpalue": "^11.0 || dev-master",
-        "buepro/typo3-pp-gridelements": "^1.0.0 || dev-master",
+        "buepro/typo3-pizpalue": "^11.2 || dev-master",
+        "buepro/typo3-pp-gridelements": "^1.1.0 || dev-master",
         "buepro/typo3-user-pizpalue": "dev-master"
     },
     "require-dev": {

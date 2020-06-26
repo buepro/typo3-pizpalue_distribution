@@ -3,9 +3,9 @@
 
 .. _faq:
 
-==========================
-Frequently asked questions
-==========================
+===
+FAQ
+===
 
 .. _faq_administration:
 

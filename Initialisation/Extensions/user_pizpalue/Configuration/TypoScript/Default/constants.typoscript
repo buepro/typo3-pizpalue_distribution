@@ -22,15 +22,23 @@ pizpalue.agency {
 #=========================================================#
 
 pizpalue.customer {
-    commonName = Allgemeiner Kundenname
-    commonEmail = info@domain.ch
-    commonPhone = 111 111 11 11
+    company = Company GmbH
+    domain = domain.ch
     contactName = Allgemeiner Kundenname
-    contactPhone = 111 111 11 12
+    contactPhone = 111 111 11 11
+    contactFax = 111 111 11 12
     contactEmail = contact@domain.ch
     contactAddress = Strasse 1
+    contactAddressAddition = Floor 4
     contactZip = 1111
     contactCity = Ort
+    contactRegion = Region
+    contactCountry = Country
+    bestRating = 100
+    worstRating = 0
+    ratingValue = 85
+    ratingCount = 612
+    reviewAspect = Overall customer satisfation
 }
 
 
@@ -42,12 +50,12 @@ user_pizpalue {
     page.fluidtemplate {
         #layoutRootPath = EXT:user_pizpalue/Resources/Private/Layouts/Page/
         #partialRootPath = EXT:user_pizpalue/Resources/Private/Partials/Page/
-        #templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/Page/
+        templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/Page/
     }
     contentElement.fluidtemplate {
         #layoutRootPath = EXT:user_pizpalue/Resources/Private/Layouts/ContentElements/
         #partialRootPath = EXT:user_pizpalue/Resources/Private/Partials/ContentElements/
-        #templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/ContentElements/
+        templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/ContentElements/
     }
 }
 
@@ -88,7 +96,12 @@ page {
             style = default
             type =
         }
-        meta.enable = 0
+        meta {
+            enable = 0
+            navigationType = list
+            # navigationValue = list of page uid's
+            includeNotInMenu = 1
+        }
         language.enable = 1
     }
 }
@@ -282,6 +295,14 @@ pizpalue.animation {
         attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
     }
 }
+
+
+#=========================================================#
+# Content
+#=========================================================#
+
+# Content sliding for default layout border section
+#page.theme.pagelayout.default.colPos.3.slide = -1
 
 
 #=========================================================#

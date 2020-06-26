@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="top"></div>
+    <div class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">
+        <header id="up-header">
+            <f:link.page id="up-main-site" pageUid="{data.pid}">
+                {f:translate(key: 'protel.backToWebsite', extensionName: 'user_pizpalue')}
+            </f:link.page>
+        </header>
+        <f:render section="Border" optional="true" />
+        <div id="page-content" class="bp-page-content main-section">
+            <!--TYPO3SEARCH_begin-->
+            <f:render section="Main" />
+            <!--TYPO3SEARCH_end-->
+        </div>
+</div>
+<f:if condition="{pizpalue.menu.fast.enable}">
+    <f:render partial="Navigation/Fast" arguments="{_all}" />
+</f:if>
+</f:spaceless>
+</html>

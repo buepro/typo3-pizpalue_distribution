@@ -1,0 +1,5 @@
+@import "EXT:user_pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig"
+
+tx_news.templateLayouts {
+    1590688495973 = Mit Hintergrundbild
+}

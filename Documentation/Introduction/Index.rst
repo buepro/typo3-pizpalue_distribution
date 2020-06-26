@@ -41,41 +41,29 @@ Discover the functionality by browsing through the `demo site <https://www.pizpa
 Screenshots
 ===========
 
-Structure elements
-------------------
+See as well `screenshots from pizpalue manual <https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/Introduction/Index.html#screenshots>`__
 
-See as well `demo site <https://pizpalue.buechler.pro/das-plus/strukturemente>`__.
-
-.. figure:: ../Images/Introduction/StructureElements.jpg
-   :width: 500px
-   :alt: Structure elements in back end
-
-Scroll animation
-----------------
-
-See as well `demo site <https://pizpalue.buechler.pro/das-plus/inhaltselemente/animation>`__.
-
-.. figure:: ../Images/Introduction/ScrollAnimation.jpg
-   :width: 500px
-   :alt: Scroll animation
-
-Modal dialog
+Landing page
 ------------
 
-See as well `demo site <https://pizpalue.buechler.pro/das-plus/inhaltselemente/modaler-dialog>`__.
+See as well `demo site <https://pizpalue.buechler.pro/>`__.
 
-.. figure:: ../Images/Introduction/ModalDialog.jpg
+.. figure:: ../Images/Introduction/LandingPage.jpg
    :width: 500px
-   :alt: Modal dialog
+   :alt: Landing page
 
-News
 ----
 
-See as well `demo site <https://www.pizpalue.buechler.pro/das-plus/news/>`__
+Additions page
+--------------
 
-.. figure:: ../Images/Introduction/News.jpg
+See as well `demo site <https://pizpalue.buechler.pro/das-plus/>`__.
+
+.. figure:: ../Images/Introduction/AdditionsPage.jpg
    :width: 500px
-   :alt: News
+   :alt: Additions page
+
+----
 
 Timelog
 -------
@@ -89,12 +77,4 @@ See as well `demo site <https://pizpalue.buechler.pro/das-plus/timelog>`__
 Credits
 =======
 
-This distribution can be provided thanks to outstanding work from TYPO3 community members. A big thanks goes to:
-
-- Benjamin Kott, `extension bootstrap_package <https://extensions.typo3.org/extension/bootstrap_package>`__
-- Grid Elements Team, `extension gridelements <https://extensions.typo3.org/extension/gridelements>`__
-- FluidTYPO3 Team, `extension flux <https://extensions.typo3.org/extension/flux>`__
-- Georg Ringer, `extension news <https://extensions.typo3.org/extension/news>`__
-- tt_address Development Team, `extension tt_address <https://extensions.typo3.org/extension/tt_address>`__
-- Boris Schauer, `extension slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__
-- Sven Wappler, `extension ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__
+See `section credits from pizpalue manual <https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/Introduction/Index.html#credits>`__

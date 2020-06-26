@@ -22,26 +22,16 @@ The following extensions will be installed with the distribution:
 ================================ ================
 Extension                        Version
 ================================ ================
-pizpalue                         11.0.2-11.99.99
-pp_gridelements                  1.0.0-1.99.99
+pizpalue                         11.2.0-11.99.99
+pp_gridelements                  1.1.0-1.99.99
 ================================ ================
 
 Supported extensions
 --------------------
 
-The following extensions are supported and related content is shipped with the distribution:
-
-================================ ================
-Extension                        Version
-================================ ================
-flux_elements                    1.0.2
-indexed_search                   9.5.14-9.5.99
-news                             7.3.1-7.99.99
-tt_address                       5.0.0-5.99.99
-timelog                          1.5.3-1.99.99
-slickcarousel                    3.0.3-3.99.99
-ws_flexslider                    1.5.12-1.99.99
-================================ ================
+The distribution supports the same extensions as the extension `pizpalue`. Head over to its
+`administration chapter <https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/Administration/Index.html#supported-extensions>`__
+to see the details.
 
 .. note::
 
@@ -55,56 +45,118 @@ Extension manager
 Follow these steps to install the distribution through the extension manager:
 
 #. Go to the extension manager
-#. Install ``supported extensions`` as needed
-#. Select ``Get preconfigured distribution``
-#. Search for ``Piz Palü Distribution`` and install it
+#. Install `supported extensions` as needed
+#. Select `Get preconfigured distribution`
+#. Search for `Pizpalue Distribution` and install it
 
 Composer
 --------
 
-Adding the extension to a composer based installation:
+In the following code snippets TYPO3 with the extension `pizpalue_distribution` will be installed in the directory
+`pizpalue`.
 
-.. highlight:: bash
+.. note::
+   In case you encounter a problem with the typo3 console test if **remote db connection** is required and the host
+   configuration is correct (:php:`'host' => '127.0.0.1'`).
 
-::
+.. rst-class:: bignums
 
-   composer require buepro/typo3-pizpalue-distribution
+1. Install TYPO3 (optional)
 
-Installing TYPO3 with pizpalue-distribution:
+   .. code-block:: bash
 
-.. highlight:: json
+      composer create-project typo3/cms-base-distribution pizpalue
+      cd pizpalue
+      composer req typo3/cms-recycler
+      composer req typo3/cms-indexed-search
+      composer req typo3/cms-lowlevel
 
-::
+   After the packages have been added the installation setup has to be carried out. This can be done by walking
+   through the installation wizard or by command (replace credentials in `[]`-brackets):
 
-   {
-       "name": "buepro/typo3-cms-pizpalue-distribution",
-       "description": "TYPO3 with pizpalue distribution",
-       "type": "project",
-       "repositories": [
-           {
-               "type": "composer",
-               "url": "https://composer.typo3.org/"
-           }
-       ],
-       "require": {
-           "buepro/typo3-pizpalue-distribution": "~11.0"
-       },
-       "extra": {
-           "typo3/cms": {
-               "web-dir": "web"
-           }
-       },
-       "license": "MIT",
-       "authors": [
-           {
-               "name": "Name",
-               "email": "info@domain.com"
-           }
-       ],
-       "minimum-stability": "stable"
-   }
+   .. code-block:: bash
 
-After the distribution has been added install it in the extension manager.
+      vendor/bin/typo3cms install:setup \
+      --no-interaction \
+      --database-user-name='[database_user_name]' \
+      --database-user-password='[database_password]' \
+      --database-name='[database_name]' \
+      --use-existing-database \
+      --admin-user-name='[admin_user_name]' \
+      --admin-password='[admin_password]' \
+      --site-name='[site_name]' \
+      --web-server-config='apache'
+
+2. Adding supported extensions (optional)
+
+   Just include needed extensions. To include all supported extensions use:
+
+   .. code-block:: bash
+
+      composer req svewap/ws-flexslider
+      composer req georgringer/news
+      composer req friendsoftypo3/tt-address
+      composer req buepro/typo3-timelog
+      composer req buepro/typo3-flux-elements
+
+   .. warning::
+      Not all extensions might support the current TYPO3 version. Please check the compatibility
+      prior installing an extension.
+
+3. Adding extension `pizpalue_distribution`
+
+   .. code-block:: bash
+
+      composer req buepro/typo3-pizpalue-distribution
+
+4. Update data base schema
+
+   .. code-block:: bash
+
+      vendor/bin/typo3cms database:updateschema
+
+5. Deactivate `flux`
+
+   .. code-block:: bash
+
+      vendor/bin/typo3cms extension:deactivate flux_elements
+      vendor/bin/typo3cms extension:deactivate flux
+
+   .. note::
+      `Flux` needs to be deactivated because nested flux elements can cause error when importing data.
+
+6. Reactivate extensions
+
+   .. code-block:: bash
+
+      vendor/bin/typo3cms extension:setupactive
+      vendor/bin/typo3cms extension:deactivate user_pizpalue
+      vendor/bin/typo3cms extension:deactivate pizpalue_distribution
+      vendor/bin/typo3cms extension:deactivate pizpalue
+      vendor/bin/typo3cms extension:deactivate bootstrap_package
+      vendor/bin/typo3cms extension:activate bootstrap_package
+      vendor/bin/typo3cms extension:activate pizpalue
+      vendor/bin/typo3cms extension:activate pizpalue_distribution
+      vendor/bin/typo3cms extension:activate user_pizpalue
+      vendor/bin/typo3cms extension:activate flux
+      vendor/bin/typo3cms extension:activate flux_elements
+      vendor/bin/typo3cms cache:flush
+
+   .. note::
+      The extensions `user_pizpalue`, `pizpalue_distribution`, `pizpalue` and `bootstrap_package` need to be
+      reactivated to execute scrips not being triggered by `vendor/bin/typo3cms extension:setupactive`.
+
+7. Update database reference index (optional)
+
+   .. code-block:: bash
+
+      vendor/bin/typo3cms referenceindex:update
+
+8. Copy `.htaccess` (optional, mostly not needed)
+
+   .. code-block:: bash
+
+      cp public/typo3/sysext/install/Resources/Private/FolderStructureTemplateFiles/root-htaccess public/.htaccess
 
 Customization
 =============
@@ -122,5 +174,5 @@ starting point.
    Customize the distribution for customer projects
 
 The extension might be deactivated by removing its static template or by uninstalling it. To prevent the extension
-``user_pizpalue`` from being installed the checkbox ``Install customer extension`` in the ``Extension
-Configuration`` from the settings module might be deactivated.
+`user_pizpalue` from being installed the checkbox `Install customer extension` in the `Extension
+Configuration` from the settings module might be deactivated.

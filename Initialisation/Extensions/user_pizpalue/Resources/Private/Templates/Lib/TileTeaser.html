@@ -1,0 +1,141 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="row pp-tile-row no-gutters">
+    <div class="col-lg-4 pp-tile-col">
+        <div class="row pp-tile-row no-gutters">
+            <div class="col-md-6 col-lg-12 pp-tile-col">
+                <f:render section="Tile" arguments="{sideRatio: 21, record: records.0, widths: {
+                        extrasmall: 1,
+                        small: 1,
+                        medium: 1,
+                        large: 0.34,
+                        default: 0.34
+                    }}" />
+            </div>
+            <div class="col-md-6 col-lg-12 pp-tile-col">
+                <f:render section="Tile" arguments="{sideRatio: 21, record: records.1, widths: {
+                        extrasmall: 1,
+                        small: 1,
+                        medium: 1,
+                        large: 0.34,
+                        default: 0.34
+                    }}" />
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8 pp-tile-col">
+        <f:render section="Tile" arguments="{sideRatio: 21, record: records.2, widths: {
+                extrasmall: 1,
+                small: 1,
+                medium: 1,
+                large: 0.7,
+                default: 0.7
+            }}" />
+    </div>
+</div>
+<div class="row pp-tile-row no-gutters">
+    <div class="col-md-4 pp-tile-col">
+        <f:render section="Tile" arguments="{sideRatio: 11, record: records.3, widths: {
+                extrasmall: 1,
+                small: 1,
+                medium: 0.34,
+                large: 0.34,
+                default: 0.34
+            }}" />
+    </div>
+    <div class="col-md-4 pp-tile-col">
+        <f:render section="Tile" arguments="{sideRatio: 11, record: records.4, widths: {
+                extrasmall: 1,
+                small: 1,
+                medium: 0.34,
+                large: 0.34,
+                default: 0.34
+            }}" />
+    </div>
+    <div class="col-md-4 pp-tile-col">
+        <f:render section="Tile" arguments="{sideRatio: 11, record: records.5, widths: {
+                extrasmall: 1,
+                small: 1,
+                medium: 0.34,
+                large: 0.34,
+                default: 0.34
+            }}" />
+    </div>
+</div>
+<div class="row pp-tile-row no-gutters">
+    <div class="col-md-8 pp-tile-col">
+        <f:render section="Tile" arguments="{sideRatio: 21, record: records.6, widths: {
+                extrasmall: 1
+                small: 1
+                medium: 0.7,
+                large: 0.7,
+                default: 0.7
+            }}" />
+    </div>
+    <div class="col-md-4 pp-tile-col">
+        <f:render section="Tile" arguments="{sideRatio: 11, record: records.7, widths: {
+                extrasmall: 1,
+                small: 1,
+                medium: 0.34,
+                large: 0.34,
+                default: 0.34
+            }}" />
+    </div>
+</div>
+
+<f:section name="Tile">
+    {f:variable(name: '_media', value: record.assets.0)}
+    {f:variable(name: '_variants', value: settings.responsiveimages.variants)}
+    <f:for each="{settings.responsiveimages.variants}" as="_variant" key="_name">
+        {v:variable.get(name: 'widths.{_name}') -> f:variable(name: '_b')}
+        {v:math.product(a: _variant.width, b: _b) -> v:math.ceil() -> f:variable(name: '_width')}
+        {v:variable.set(name: '_variants.{_name}', value: {breakpoint: _variant.breakpoint, width: _width})}
+    </f:for>
+    <div class="pp-tile pp-type-{record.data.CType} pp-tile-{sideRatio}">
+        <div class="frame-container">
+            <div class="frame-inner upc-type-{_media.type} m-0">
+                <f:if condition="{_media.type} == 2">
+                    <f:render section="Image" arguments="{_all}" />
+                </f:if>
+                <f:if condition="{_media.type} == 4">
+                    <figure class="video">
+                        <f:media file="{_media}" />
+                        <f:link.page pageUid="{record.data.pid}" section="c{record.data.uid}">
+                            <figcaption>{record.data.header}</figcaption>
+                        </f:link.page>
+                    </figure>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="Image">
+    <figure>
+        <f:link.page pageUid="{record.data.pid}" section="c{record.data.uid}">
+            <picture>
+                {f:variable(name: '_sideRatioMap', value: {21: 2, 11: 1, 12: 0.5})}
+                <f:for each="{_variants}" as="_variant" key="_name">
+                    {_variant.breakpoint -> v:math.ceil() -> f:variable(name: '_breakpoint')}
+                    {_variant.width -> v:math.ceil() -> f:variable(name: '_width')}
+                    {v:variable.get(name: '_sideRatioMap.{sideRatio}', useRawKeys: 1) -> f:variable(name: '_b')}
+                    {v:math.division(a: _width, b: _b) -> v:math.ceil() -> f:variable(name: '_height')}
+                    <f:if condition="{_name} != 'extrasmall'">
+                        <f:variable name="_mediaQuery">media="(min-width: {_breakpoint}px)"</f:variable>
+                        <f:variable name="_srcset">{f:uri.image(image: _media, width: _width, height: '{_height}c', cropVariant: 'default')}</f:variable>
+                        <source data-variant="{_name}" data-maxwidth="{_width}" {_mediaQuery -> f:format.raw()} srcset="{_srcset}">
+                    </f:if>
+                </f:for>
+                {_variants.extrasmall.width -> v:math.ceil() -> f:variable(name: '_width')}
+                {v:variable.get(name: '_sideRatioMap.{sideRatio}', useRawKeys: 1) -> f:variable(name: '_b')}
+                {v:math.division(a: _width, b: _b) -> v:math.ceil() -> f:variable(name: '_height')}
+                <img src="{f:uri.image(image: _media, width: _width, height: '{_height}c', cropVariant: 'default')}" />
+            </picture>
+        </f:link.page>
+        <figcaption>{record.data.header}</figcaption>
+    </figure>
+</f:section>
+
+</html>

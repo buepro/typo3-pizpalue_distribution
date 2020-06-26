@@ -1,0 +1,29 @@
+lib.tileTeaser = FLUIDTEMPLATE
+lib.tileTeaser {
+    templateName = TileTeaser
+    layoutRootPaths {
+        10 = EXT:user_pizpalue/Resources/Private/Layouts/ContentElements/
+    }
+    templateRootPaths {
+        10 = EXT:user_pizpalue/Resources/Private/Templates/Lib
+    }
+    dataProcessing {
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tt_content
+            pidInList = 60
+            orderBy = sorting
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = assets
+                    as = assets
+                }
+            }
+        }
+    }
+    settings {
+        mediaPid = 60
+        responsiveimages.variants < lib.contentElement.settings.responsiveimages.variants
+    }
+}

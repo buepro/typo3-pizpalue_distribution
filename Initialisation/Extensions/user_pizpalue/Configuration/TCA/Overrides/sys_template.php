@@ -7,6 +7,8 @@
  * LICENSE file that was distributed with this source code.
  */
 
+defined('TYPO3_MODE') || die();
+
 (function ($extensionKey) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
