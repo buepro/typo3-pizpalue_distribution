@@ -67,9 +67,6 @@ In the following code snippets TYPO3 with the extension `pizpalue_distribution` 
 
       composer create-project typo3/cms-base-distribution pizpalue
       cd pizpalue
-      composer req typo3/cms-recycler
-      composer req typo3/cms-indexed-search
-      composer req typo3/cms-lowlevel
 
    After the packages have been added the installation setup has to be carried out. This can be done by walking
    through the installation wizard or by command (replace credentials in `[]`-brackets):
@@ -93,11 +90,8 @@ In the following code snippets TYPO3 with the extension `pizpalue_distribution` 
 
    .. code-block:: bash
 
-      composer req svewap/ws-flexslider
-      composer req georgringer/news
-      composer req friendsoftypo3/tt-address
-      composer req buepro/typo3-timelog
       composer req buepro/typo3-flux-elements
+      composer req buepro/typo3-container-elements
 
    .. warning::
       Not all extensions might support the current TYPO3 version. Please check the compatibility

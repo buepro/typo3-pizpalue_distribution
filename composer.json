@@ -30,9 +30,15 @@
     "require": {
         "typo3/cms-core": "^10.4",
         "typo3/cms-impexp": "^10.4",
+        "typo3/cms-recycler": "^10.4",
+        "typo3/cms-indexed-search": "^10.4",
+        "typo3/cms-lowlevel": "^10.4",
         "buepro/typo3-pizpalue": "^11.2 || dev-master",
         "buepro/typo3-pp-gridelements": "^1.1.0 || dev-master",
-        "buepro/typo3-user-pizpalue": "dev-master"
+        "svewap/ws-flexslider": "^1.5.14",
+        "georgringer/news": "^8.4.0",
+        "friendsoftypo3/tt-address": "^5.1.2",
+        "buepro/typo3-timelog": "^1.6.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
