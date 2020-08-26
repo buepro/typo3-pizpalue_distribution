@@ -52,6 +52,10 @@ Follow these steps to install the distribution through the extension manager:
 Composer
 --------
 
+.. hint::
+   A composer package to be used with the command `create-project` is available.
+   See `buepro/typo3-pizpalue-distribution-base <https://packagist.org/packages/buepro/typo3-pizpalue-distribution-base>`__.
+
 In the following code snippets TYPO3 with the extension `pizpalue_distribution` will be installed in the directory
 `pizpalue`.
 
@@ -99,9 +103,23 @@ In the following code snippets TYPO3 with the extension `pizpalue_distribution` 
 
 3. Adding extension `pizpalue_distribution`
 
-   .. code-block:: bash
+   #. Add autoload section to `composer.json`
 
-      composer req buepro/typo3-pizpalue-distribution
+      This is needed since the extension `user_pizpalue` is added manually to the site.
+
+      .. code-block:: json
+
+         "autoload": {
+            "psr-4": {
+               "Buepro\\UserPizpalue\\": "public/typo3conf/ext/user_pizpalue/Classes"
+            }
+         }
+
+   #. Get package `buepro/typo3-pizpalue-distribution`
+
+      .. code-block:: bash
+
+         composer req buepro/typo3-pizpalue-distribution
 
 4. Update data base schema
 
