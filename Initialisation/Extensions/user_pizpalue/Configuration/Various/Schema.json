@@ -1,0 +1,41 @@
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "{$pizpalue.customer.company}",
+      "description": "{func:newLineToRn:{data:field:teaser}}",
+      "image": "{processedData:schemaImages.0}",
+      "logo":{
+        "@type":"ImageObject",
+        "height":"600",
+        "url":"https://www.{$pizpalue.customer.domain}/typo3conf/ext/user_pizpalue/Resources/Public/Images/logo.png",
+        "width":"482"
+      },
+      "address":{
+        "@type":"PostalAddress",
+        "addressCountry":"{$pizpalue.customer.contactCountry}",
+        "addressLocality":"{$pizpalue.customer.contactCity}",
+        "postalCode":"{$pizpalue.customer.contactZip}",
+        "streetAddress":"{$pizpalue.customer.contactAddress}"
+      },
+      "hasMap": "https://www.openstreetmap.org/",
+      "openingHours": [
+        "Mo-Fr 08:00-12:00",
+        "Mo-Fr 13:30-18:00"
+      ],
+      "url": "https://www.{$pizpalue.customer.domain}",
+      "sameAs":[
+        "https://twitter.com/"
+      ],
+      "email":"{$pizpalue.customer.contactEmail}",
+      "telephone":"{$pizpalue.customer.contactEmail}"
+    },
+    {
+      "@type":"WebPage",
+      "headline":"{parentData:field:seo_title}",
+      "description":"{parentData:field:description}",
+      "breadcrumb":{processedData:breadcrumb}
+    }
+  ]
+}

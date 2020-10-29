@@ -70,7 +70,7 @@ page {
     #---------------------------------------------------------#
     # JS
     #---------------------------------------------------------#
-    #includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScripts/Dist/jquery.general.min.js
+    #includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
 
     #---------------------------------------------------------#
     # Template
@@ -81,6 +81,20 @@ page {
         partialRootPaths.3 = {$user_pizpalue.page.fluidtemplate.partialRootPath}
     }
 }
+
+
+#=========================================================#
+# Structured data (update pidInList and uidInList)
+#=========================================================#
+
+#page.910 = CONTENT
+#page.910 {
+#    table = tt_content
+#    select {
+#        pidInList = 81
+#        uidInList = 786
+#    }
+#}
 
 
 #=========================================================#
@@ -96,5 +110,5 @@ page.10.dataProcessing.20.levels = 3
 #=========================================================#
 
 [{$pizpalue.agency.siteMode} == 1]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_pizpalue/Configuration/TypoScript/Develop/setup.typoscript">
+    @import 'EXT:user_pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
 [END]

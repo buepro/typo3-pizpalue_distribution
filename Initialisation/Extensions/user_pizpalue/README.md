@@ -68,7 +68,7 @@ in the folder [`Configuration/TypoScript/Default`](Configuration/TypoScript/Defa
 by copying the needed fragments to
 [`Configuration/TypoScript/constants.typoscript`](Configuration/TypoScript/constants.typoscript) or
 [`Configuration/TypoScript/setup.typoscript`](Configuration/TypoScript/setup.typoscript). The inclusion from the default
-TS (see `<INCLUDE_TYPOSCRIPT...`) might be deleted.
+TS (see `@import...`) might be deleted.
 
 ### CSS/SCSS
 

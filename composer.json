@@ -1,7 +1,7 @@
 {
     "name": "buepro/typo3-pizpalue-distribution",
     "type": "typo3-cms-extension",
-    "description": "This TYPO3 distribution provides a sample website using bootstrap and the extensions pizpalue and pp_gridelements. The distribution tailors Swiss market featuring German as default language and additional translations to French, English and Finnish.",
+    "description": "This TYPO3 distribution provides a sample website using bootstrap and the extensions pizpalue and container_elements. The distribution tailors Swiss market featuring German as default language and additional translations to French, English and Finnish.",
     "keywords": [
         "TYPO3 CMS",
         "distribution",
@@ -33,11 +33,11 @@
         "typo3/cms-recycler": "^10.4",
         "typo3/cms-indexed-search": "^10.4",
         "typo3/cms-lowlevel": "^10.4",
-        "buepro/typo3-pizpalue": "^11.2 || dev-master",
-        "buepro/typo3-pp-gridelements": "^1.1.0 || dev-master",
+        "buepro/typo3-pizpalue": "^11.4.1 || dev-master",
+        "buepro/typo3-container-elements": "^1.0.0 || dev-master",
         "svewap/ws-flexslider": "^1.5.14",
-        "georgringer/news": "^8.4.0",
-        "friendsoftypo3/tt-address": "^5.1.2",
+        "georgringer/news": "^8.5.0",
+        "friendsoftypo3/tt-address": "^5.2.0",
         "buepro/typo3-timelog": "^1.6.0"
     },
     "require-dev": {

@@ -26,7 +26,9 @@ pizpalue.customer {
     domain = domain.ch
     contactName = Allgemeiner Kundenname
     contactPhone = 111 111 11 11
-    contactFax = 111 111 11 12
+    contactPhoneAlt = 111 111 11 12
+    contactFax = 111 111 11 21
+    contactMessenger = ThreemaID
     contactEmail = contact@domain.ch
     contactAddress = Strasse 1
     contactAddressAddition = Floor 4
@@ -65,7 +67,6 @@ user_pizpalue {
 #=========================================================#
 
 pizpalue.features {
-    #scrollAnimation.enable = 1
     #fontAwesome.enable = 0
     #revealFooter = 0
     #useStyle = 1
@@ -273,28 +274,13 @@ pizpalue.storage {
 # Animation
 #=========================================================#
 
-pizpalue.animation {
-    1 {
-        classes =
-        style =
-        attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
-    }
-    2 {
-        classes =
-        style =
-        attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
-    }
-    3 {
-        classes =
-        style =
-        attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
-    }
-    4 {
-        classes =
-        style =
-        attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
-    }
-}
+#pizpalue.animation {
+#    1 {
+#        classes =
+#        style =
+#        attributes = data-josh-anim-name="fadeInBottomLeft"
+#    }
+#}
 
 
 #=========================================================#

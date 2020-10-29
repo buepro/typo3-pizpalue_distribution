@@ -23,7 +23,7 @@ The following extensions will be installed with the distribution:
 Extension                        Version
 ================================ ================
 pizpalue                         11.2.0-11.99.99
-pp_gridelements                  1.1.0-1.99.99
+container_elements               1.0.0-1.99.99
 ================================ ================
 
 Supported extensions

@@ -12,4 +12,4 @@
 # this file and remove the below listed include tag.
 #=========================================================#
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_pizpalue/Configuration/TypoScript/Default/setup.typoscript">
+@import 'EXT:user_pizpalue/Configuration/TypoScript/Default/setup.typoscript'
