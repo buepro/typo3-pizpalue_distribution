@@ -10,9 +10,11 @@
         "frontend",
         "theme",
         "web",
-        "pizpalue",
-        "flux",
+        "news",
+        "calendar",
+        "container",
         "gridelements",
+        "flux",
         "timelog"
     ],
     "homepage": "https://github.com/buepro/typo3-pizpalue_distribution",
