@@ -24,6 +24,11 @@ Extension                        Version
 ================================ ================
 pizpalue                         11.2.0-11.99.99
 container_elements               1.0.0-1.99.99
+news                             8.5.0-8.99.99
+eventnews                        4.0.0-4.99.99
+tt_address                       5.2.0-8.99.99
+ws_flexslider                    1.5.14-1.99.99
+timelog                          1.6.0-1.99.99
 ================================ ================
 
 Supported extensions

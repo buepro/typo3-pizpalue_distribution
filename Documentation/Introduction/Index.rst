@@ -25,18 +25,18 @@ new features and complements other extensions.
 The following extensions complement this distribution:
 
 - `container_elements <https://extensions.typo3.org/extension/container_elements>`__, structure elements
-
-Additional features are ready to be used and just need to be activated by installing the related extension:
-
 - `news <https://extensions.typo3.org/extension/news>`__, news system
 - `eventnews <https://extensions.typo3.org/extension/eventnews>`__, news system
 - `tt_address <https://extensions.typo3.org/extension/tt_address>`__, address lists
+- `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__, carousel
+- `timelog <https://extensions.typo3.org/extension/timelog>`__, time and activity registration for projects
+
+Additional features are ready to be used and just need to be activated by installing the related extension:
+
 - `indexed_search <https://docs.typo3.org/c/typo3/cms-indexed-search/master/en-us/>`__, website search
 - `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__, structure elements
 - `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__, structure elements
-- `timelog <https://extensions.typo3.org/extension/timelog>`__, time and activity registration for projects
 - `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__, carousel
-- `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__, carousel
 
 Discover the functionality by browsing through the `demo site <https://www.pizpalue.buechler.pro/>`__.
 

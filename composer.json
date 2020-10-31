@@ -33,11 +33,12 @@
         "typo3/cms-recycler": "^10.4",
         "typo3/cms-indexed-search": "^10.4",
         "typo3/cms-lowlevel": "^10.4",
-        "buepro/typo3-pizpalue": "^11.4.1 || dev-master",
-        "buepro/typo3-container-elements": "^1.0.0 || dev-master",
-        "svewap/ws-flexslider": "^1.5.14",
+        "buepro/typo3-pizpalue": "^11.4.1",
+        "buepro/typo3-container-elements": "^1.0.0",
         "georgringer/news": "^8.5.0",
+        "georgringer/eventnews": "^4.0.0",
         "friendsoftypo3/tt-address": "^5.2.0",
+        "svewap/ws-flexslider": "^1.5.14",
         "buepro/typo3-timelog": "^1.6.0"
     },
     "require-dev": {
