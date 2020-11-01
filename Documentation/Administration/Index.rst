@@ -84,29 +84,16 @@ In the following code snippets TYPO3 with the extension `pizpalue_distribution` 
 
       vendor/bin/typo3cms install:setup \
       --no-interaction \
+      --use-existing-database \
+      --database-name='[database_name]' \
       --database-user-name='[database_user_name]' \
       --database-user-password='[database_password]' \
-      --database-name='[database_name]' \
-      --use-existing-database \
       --admin-user-name='[admin_user_name]' \
       --admin-password='[admin_password]' \
       --site-name='[site_name]' \
       --web-server-config='apache'
 
-2. Adding supported extensions (optional)
-
-   Just include needed extensions. To include all supported extensions use:
-
-   .. code-block:: bash
-
-      composer req buepro/typo3-flux-elements
-      composer req buepro/typo3-container-elements
-
-   .. warning::
-      Not all extensions might support the current TYPO3 version. Please check the compatibility
-      prior installing an extension.
-
-3. Adding extension `pizpalue_distribution`
+2. Adding extension `pizpalue_distribution`
 
    #. Add autoload section to `composer.json`
 
@@ -126,54 +113,16 @@ In the following code snippets TYPO3 with the extension `pizpalue_distribution` 
 
          composer req buepro/typo3-pizpalue-distribution
 
-4. Update data base schema
+3. Setup extensions
 
    .. code-block:: bash
 
-      vendor/bin/typo3cms database:updateschema
-
-5. Deactivate `flux`
-
-   .. code-block:: bash
-
-      vendor/bin/typo3cms extension:deactivate flux_elements
-      vendor/bin/typo3cms extension:deactivate flux
-
-   .. note::
-      `Flux` needs to be deactivated because nested flux elements can cause error when importing data.
-
-6. Reactivate extensions
-
-   .. code-block:: bash
-
-      vendor/bin/typo3cms extension:setupactive
-      vendor/bin/typo3cms extension:deactivate user_pizpalue
       vendor/bin/typo3cms extension:deactivate pizpalue_distribution
       vendor/bin/typo3cms extension:deactivate pizpalue
-      vendor/bin/typo3cms extension:deactivate bootstrap_package
-      vendor/bin/typo3cms extension:activate bootstrap_package
+      vendor/bin/typo3cms extension:setupactive
       vendor/bin/typo3cms extension:activate pizpalue
       vendor/bin/typo3cms extension:activate pizpalue_distribution
-      vendor/bin/typo3cms extension:activate user_pizpalue
-      vendor/bin/typo3cms extension:activate flux
-      vendor/bin/typo3cms extension:activate flux_elements
       vendor/bin/typo3cms cache:flush
-
-   .. note::
-      The extensions `user_pizpalue`, `pizpalue_distribution`, `pizpalue` and `bootstrap_package` need to be
-      reactivated to execute scrips not being triggered by `vendor/bin/typo3cms extension:setupactive`.
-
-7. Update database reference index (optional)
-
-   .. code-block:: bash
-
-      vendor/bin/typo3cms referenceindex:update
-
-8. Copy `.htaccess` (optional, mostly not needed)
-
-   .. code-block:: bash
-
-      cp public/typo3/sysext/install/Resources/Private/FolderStructureTemplateFiles/root-htaccess public/.htaccess
 
 Customization
 =============
