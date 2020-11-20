@@ -84,6 +84,11 @@ plugin.bootstrap_package.settings.scss {
 }
 pizpalue.scaffold {
     #showFooter = 1
+    footer {
+        leftColumnClass = col-md-4 ppc-left
+        middleColumnClass = col-md-4 ppc-middle
+        rightColumnClass = col-md-4 ppc-right
+    }
 }
 
 
@@ -123,19 +128,22 @@ page {
 # Font
 #=========================================================#
 
-#page.theme.googleFont {
+page.theme.googleFont {
 #    enable = 1
 #    font = Source Sans Pro
 #    weight = 300,400,700
-#}
+}
 
-#plugin.bootstrap_package {
-#    settings {
-#        scss {
+plugin.bootstrap_package {
+    settings {
+        scss {
 #            font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 #            font-family-monospace = SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 #            font-family-base = "#{$google-webfont}", sans-serif
 #            font-size-base = 1rem
+#            font-size-lg = $font-size-base * 1.25
+#            font-size-sm = $font-size-base * .875
+#            navbar-brand-font-size = $font-size-lg
 #            font-weight-lighter = 400
 #            font-weight-light = 400
 #            font-weight-normal = 400
@@ -143,37 +151,52 @@ page {
 #            font-weight-bolder = 700
 #            headings-font-weight = 400
 #            lead-font-weight = 400
-#        }
-#    }
-#}
+        }
+    }
+}
 
 #=========================================================#
 # Colors
 #=========================================================#
 
 plugin.bootstrap_package.settings.scss {
-    #primary = #0083C4
-    #secondary = adjust-hue($primary, -33)
-    #complementary = lighten(desaturate(adjust-hue(#0083c4, -167), 10%), 12%)
-    #body-bg = #fff
-    #navbar-light-bg = #e8e8e8
-    #footer-bg = #333
-    #footer-meta-bg = darken($footer-bg, 3%)
-    #navbar-light-color = lighten($navbar-light-active-color,15%)
-    #navbar-light-hover-color = $navbar-light-active-color
-    #navbar-light-hover-bg = transparent
-    #navbar-light-active-color = #333
-    #navbar-light-active-bg = transparent
-    #navbar-light-disabled-color = #ccc
-    #navbar-light-disabled-bg = transparent
-    #footer-color = pp-contrast($footer-bg)
-    #footer-link-color = mix($primary,$footer-color,30%)
-    #footer-link-hover-color = lighten($footer-link-color, 10%)
-    #footer-link-hover-decoration = none
-    #footer-meta-color = pp-contrast($footer-meta-bg)
-    #footer-meta-link-color = mix($primary,$footer-meta-color,30%)
-    #footer-meta-link-hover-color = lighten($footer-meta-link-color, 10%)
-    #footer-meta-link-hover-decoration = none
+#    primary = #0083C4
+#    secondary = adjust-hue($primary, -33)
+#    complementary = lighten(desaturate(adjust-hue(#0083c4, -167), 10%), 12%)
+#    body-bg = #fff
+#    body-color = $gray-900
+#    navbar-light-bg = #e8e8e8
+#    footer-bg = #333
+#    footer-meta-bg = darken($footer-bg, 3%)
+#    navbar-light-color = lighten($navbar-light-active-color,15%)
+#    navbar-light-hover-color = $navbar-light-active-color
+#    navbar-light-hover-bg = transparent
+#    navbar-light-active-color = #333
+#    navbar-light-active-bg = transparent
+#    navbar-light-disabled-color = #ccc
+#    navbar-light-disabled-bg = transparent
+#    footer-color = pp-contrast($footer-bg)
+#    footer-link-color = mix($primary,$footer-color,30%)
+#    footer-link-hover-color = lighten($footer-link-color, 10%)
+#    footer-link-hover-decoration = none
+#    footer-meta-color = pp-contrast($footer-meta-bg)
+#    footer-meta-link-color = mix($primary,$footer-meta-color,30%)
+#    footer-meta-link-hover-color = lighten($footer-meta-link-color, 10%)
+#    footer-meta-link-hover-decoration = none
+#    headings-color = null
+}
+
+
+#=========================================================#
+# Sections, elements, components
+#=========================================================#
+
+plugin.bootstrap_package.settings.scss {
+    #---------------------------------------------------------#
+    # Navbar
+    #---------------------------------------------------------#
+#    navbar-nav-link-padding-x = 1rem
+#    grid-float-breakpoint = 992
 }
 
 
