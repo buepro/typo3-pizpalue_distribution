@@ -35,6 +35,7 @@
         "typo3/cms-recycler": "^10.4",
         "typo3/cms-indexed-search": "^10.4",
         "typo3/cms-lowlevel": "^10.4",
+        "typo3/cms-redirects": "^10.4",
         "buepro/typo3-pizpalue": "^11.4.1 || dev-master",
         "buepro/typo3-container-elements": "^1.0.0 || dev-master",
         "georgringer/news": "^8.5.0",
