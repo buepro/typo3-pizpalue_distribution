@@ -1,0 +1,6 @@
+services:
+  Buepro\PizpalueDistribution\Service\ExtensionInstallService:
+    tags:
+      - name: event.listener
+        identifier: 'buepro/pizpalue-distribution/finalize-extension-installation'
+        event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
