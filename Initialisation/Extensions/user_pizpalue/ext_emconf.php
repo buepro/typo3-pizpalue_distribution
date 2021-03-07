@@ -8,24 +8,24 @@
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title'            => 'Pizpalue custom template',
-    'description'      => 'Custom template being used with template pizpalue.',
-    'category'         => 'templates',
-    'author'           => 'Roman Büchler',
-    'author_email'     => 'rb@buechler.pro',
-    'state'            => 'stable',
-    'internal'         => '',
-    'uploadfolder'     => '0',
-    'createDirs'       => '',
+    'title' => 'Pizpalue custom template',
+    'description' => 'Custom template being used with template pizpalue.',
+    'category' => 'templates',
+    'author' => 'Roman Büchler',
+    'author_email' => 'rb@buechler.pro',
+    'state' => 'stable',
+    'internal' => '',
+    'uploadfolder' => '0',
+    'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version'          => '1.0.0',
-    'constraints'      => [
-        'depends'   => [
-            'typo3'         => '10.4.0-99.99.99'
+    'version' => '1.0.0',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '10.4.0-99.99.99'
         ],
         'conflicts' => [
         ],
-        'suggests'  => [
+        'suggests' => [
         ],
     ],
     'autoload' => [

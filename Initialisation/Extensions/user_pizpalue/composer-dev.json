@@ -1,0 +1,42 @@
+{
+	"name": "buepro/typo3-user-pizpalue",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3 Custom template being used with template pizpalue.",
+	"keywords": [
+		"TYPO3 CMS",
+		"bootstrap",
+		"pizpalue",
+		"responsive",
+		"frontend",
+		"theme",
+		"web"
+	],
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Roman Büchler",
+			"email": "rb@buechler.pro",
+			"homepage": "https://www.buechler.pro/",
+			"role": "Developer"
+		}
+	],
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^2.16.3",
+		"helmich/typo3-typoscript-lint": "^2.1.1",
+		"j13k/yaml-lint": "1.1.x-dev",
+		"seld/jsonlint": "^1.8"
+	},
+	"prefer-stable": true,
+	"support": {
+		"issues": "https://github.com/buepro/typo3-user_pizpalue/issues",
+		"source": "https://github.com/buepro/typo3-user_pizpalue"
+	},
+	"scripts": {
+		"check:php": "./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config .php_cs.php -v --dry-run --using-cache false --diff --diff-format=udiff",
+		"fix:php": "./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config .php_cs.php -v --using-cache false",
+		"lint:ts":  "./vendor/bin/typoscript-lint -c Configuration/TsLint.yml --ansi -n --fail-on-warnings -vvv Configuration/TypoScript",
+		"lint:json": "find -name vendor -prune -type f -o -name '*.json' ! -name 'Schema.json' | xargs ./vendor/bin/jsonlint -q",
+		"lint:yaml": "find \\( -name .ddev -o -name vendor \\) -prune -type f -o -name '*.yml' -o -name '*.yaml' | xargs ./vendor/bin/yaml-lint",
+		"uninstall": "rm -rf composer-dev.lock vendor && ls -l"
+	}
+}

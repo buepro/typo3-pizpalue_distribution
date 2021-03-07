@@ -5,8 +5,17 @@
 		<header/>
 		<body>
 			<trans-unit id="ext_conf.addAdditionalConfiguration">
-				<source>Add additional configuration file (typo3conf/AdditionalConfiguration.php)</source>
-				<target state="translated">Lisää määritys tiedosto (typo3conf/AdditionalConfiguration. php)</target>
+				<source>Add configuration file (typo3conf/AdditionalConfiguration.php) if it doesn't exist.</source>
+				<target state="translated">Lisää määritystiedosto (typo3conf / AdditionalConfiguration.php), jos sitä ei ole.
+				</target>
+			</trans-unit>
+			<trans-unit id="ext_conf.forceAdditionalConfiguration">
+				<source>Force adding configuration file (typo3conf/AdditionalConfiguration.php). Overwrites existing one.</source>
+				<target state="translated">Pakota lisäämään määritystiedosto (typo3conf / AdditionalConfiguration.php). Korvaa olemassa olevan.</target>
+			</trans-unit>
+			<trans-unit id="ext_conf.additionalConfigurationChanged">
+				<source>The extension user_pizpalue changed the configuration file (typo3conf/AdditionalConfiguration.php).</source>
+				<target state="translated">Laajennus user_pizpalue muutti määritystiedostoa (typo3conf / AdditionalConfiguration.php).</target>
 			</trans-unit>
 		</body>
 	</file>

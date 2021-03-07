@@ -1,40 +1,47 @@
 {
-  "name": "buepro/typo3-user-pizpalue",
-  "type": "typo3-cms-extension",
-  "description": "TYPO3 Custom template being used with template pizpalue.",
-  "keywords": [
-    "TYPO3 CMS",
-    "bootstrap",
-    "pizpalue",
-    "responsive",
-    "frontend",
-    "theme",
-    "web"
-  ],
-  "homepage": "https://github.com/buepro/typo3-user_pizpalue",
-  "authors": [
-    {
-      "name": "Roman Büchler",
-      "email": "rb@buechler.pro",
-      "homepage": "https://www.buechler.pro/",
-      "role": "Developer"
-    }
-  ],
-  "license": "MIT",
-  "require": {
-    "typo3/cms-core": ">=10.4"
-  },
-  "autoload": {
-    "psr-4": {
-      "Buepro\\UserPizpalue\\": "Classes"
-    }
-  },
-  "replace": {
-    "buepro/typo3-user-pizpalue": "self.version"
-  },
-  "extra": {
-    "typo3/cms": {
-        "extension-key": "user_pizpalue"
-    }
-  }
+	"name": "buepro/typo3-user-pizpalue",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3 Custom template being used with template pizpalue.",
+	"keywords": [
+		"TYPO3 CMS",
+		"bootstrap",
+		"pizpalue",
+		"responsive",
+		"frontend",
+		"theme",
+		"web"
+	],
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Roman Büchler",
+			"email": "rb@buechler.pro",
+			"homepage": "https://www.buechler.pro/",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"typo3/cms-core": ">=10.4"
+	},
+	"replace": {
+		"buepro/typo3-user-pizpalue": "self.version"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^2.16.3"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "user_pizpalue"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Buepro\\UserPizpalue\\": "Classes"
+		}
+	},
+	"prefer-stable": true,
+	"support": {
+		"issues": "https://github.com/buepro/typo3-user_pizpalue/issues",
+		"source": "https://github.com/buepro/typo3-user_pizpalue"
+	}
 }

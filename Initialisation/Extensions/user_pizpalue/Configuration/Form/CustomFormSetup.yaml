@@ -1,6 +1,6 @@
 TYPO3:
-    CMS:
-        Form:
-            persistenceManager:
-                allowedFileMounts:
-                    300: 1:/user_pizpalue/customforms/
+  CMS:
+    Form:
+      persistenceManager:
+        allowedFileMounts:
+          300: 1:/user_pizpalue/customforms/

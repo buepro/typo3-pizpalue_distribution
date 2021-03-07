@@ -1,0 +1,15 @@
+module.tx_form {
+  settings {
+    yamlConfigurations {
+      300 = EXT:user_pizpalue/Configuration/Form/CustomFormSetup.yaml
+    }
+  }
+}
+
+plugin.tx_form {
+  settings {
+    yamlConfigurations {
+      300 = EXT:user_pizpalue/Configuration/Form/CustomFormSetup.yaml
+    }
+  }
+}

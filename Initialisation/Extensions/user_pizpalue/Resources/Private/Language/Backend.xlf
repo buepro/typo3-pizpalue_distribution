@@ -5,7 +5,13 @@
 		<header/>
 		<body>
 			<trans-unit id="ext_conf.addAdditionalConfiguration">
-				<source>Add additional configuration file (typo3conf/AdditionalConfiguration.php)</source>
+				<source>Add configuration file (typo3conf/AdditionalConfiguration.php) if it doesn't exist.</source>
+			</trans-unit>
+			<trans-unit id="ext_conf.forceAdditionalConfiguration">
+				<source>Force adding configuration file (typo3conf/AdditionalConfiguration.php). Overwrites existing one.</source>
+			</trans-unit>
+			<trans-unit id="ext_conf.additionalConfigurationChanged">
+				<source>The extension user_pizpalue changed the configuration file (typo3conf/AdditionalConfiguration.php).</source>
 			</trans-unit>
 		</body>
 	</file>

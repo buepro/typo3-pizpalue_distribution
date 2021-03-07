@@ -9,7 +9,7 @@
 
 defined('TYPO3_MODE') || die();
 
-(function ($extensionKey) {
+(function ($extensionKey): void {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
         'Configuration/TypoScript',

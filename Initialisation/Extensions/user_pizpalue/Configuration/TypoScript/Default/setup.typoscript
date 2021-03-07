@@ -3,36 +3,37 @@
 #=========================================================#
 
 lib.contentElement {
-    layoutRootPaths {
-        30 = {$user_pizpalue.contentElement.fluidtemplate.layoutRootPath}
-    }
-    templateRootPaths {
-        30 = {$user_pizpalue.contentElement.fluidtemplate.templateRootPath}
-    }
-    partialRootPaths {
-        30 = {$user_pizpalue.contentElement.fluidtemplate.partialRootPath}
-    }
+  layoutRootPaths {
+    30 = {$user_pizpalue.contentElement.fluidtemplate.layoutRootPath}
+  }
 
-    #:::::::::::::::::::::::
-    #: Set maximum image resolution(s)
-    #.
-#    settings {
-#        responsiveimages {
-#            variants {
-#                default {
-#                    breakpoint = 1200
-#                    width = 1800
-#                }
-#                large {}
-#                medium {}
-#                small {}
-#                extrasmall {}
-#            }
+  templateRootPaths {
+    30 = {$user_pizpalue.contentElement.fluidtemplate.templateRootPath}
+  }
+
+  partialRootPaths {
+    30 = {$user_pizpalue.contentElement.fluidtemplate.partialRootPath}
+  }
+
+  #:::::::::::::::::::::::
+  #: Set maximum image resolution(s)
+  #.
+#  settings {
+#    responsiveimages {
+#      variants {
+#        default {
+#          breakpoint = 1200
+#          width = 1800
 #        }
+#        large {}
+#        medium {}
+#        small {}
+#        extrasmall {}
+#      }
 #    }
+#  }
 }
 
-# @import 'EXT:user_pizpalue/Configuration/TypoScript/Lib/TileTeaser.typoscript'
 
 #=========================================================#
 # Config
@@ -47,39 +48,39 @@ config.pageTitle.stdWrap.override.field = seo_title // title
 #=========================================================#
 
 page {
-    #---------------------------------------------------------#
-    # CSS/Scss
-    #---------------------------------------------------------#
-    includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/custom.scss
-    #:::::::::::::::::::::::
-    #: Add own icon font containing pizpalue icons
-    #.
-    #includeCSSLibs {
-        #pizpalueicon >
-        #upicon = EXT:user_pizpalue/Resources/Public/Fonts/upicon.min.css
-        #upicon {
-        #    fontLoader {
-        #        families {
-        #            0 = UpIcon
-        #        }
-        #        enabled = 1
-        #    }
-        #}
-    #}
+  #---------------------------------------------------------#
+  # CSS/Scss
+  #---------------------------------------------------------#
+  includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/custom.scss
+  #:::::::::::::::::::::::
+  #: Add own icon font containing pizpalue icons
+  #.
+#  includeCSSLibs {
+#    pizpalueicon >
+#    upicon = EXT:user_pizpalue/Resources/Public/Fonts/upicon.min.css
+#    upicon {
+#      fontLoader {
+#        families {
+#          0 = UpIcon
+#        }
+#        enabled = 1
+#      }
+#    }
+#  }
 
-    #---------------------------------------------------------#
-    # JS
-    #---------------------------------------------------------#
-    #includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
+  #---------------------------------------------------------#
+  # JS
+  #---------------------------------------------------------#
+#  includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
 
-    #---------------------------------------------------------#
-    # Template
-    #---------------------------------------------------------#
-    10 {
-        layoutRootPaths.3 = {$user_pizpalue.page.fluidtemplate.layoutRootPath}
-        templateRootPaths.3 = {$user_pizpalue.page.fluidtemplate.templateRootPath}
-        partialRootPaths.3 = {$user_pizpalue.page.fluidtemplate.partialRootPath}
-    }
+  #---------------------------------------------------------#
+  # Template
+  #---------------------------------------------------------#
+  10 {
+    layoutRootPaths.3 = {$user_pizpalue.page.fluidtemplate.layoutRootPath}
+    templateRootPaths.3 = {$user_pizpalue.page.fluidtemplate.templateRootPath}
+    partialRootPaths.3 = {$user_pizpalue.page.fluidtemplate.partialRootPath}
+  }
 }
 
 
@@ -89,11 +90,11 @@ page {
 
 #page.910 = CONTENT
 #page.910 {
-#    table = tt_content
-#    select {
-#        pidInList = 81
-#        uidInList = 786
-#    }
+#  table = tt_content
+#  select {
+#    pidInList = 81
+#    uidInList = 786
+#  }
 #}
 
 
@@ -110,5 +111,5 @@ page.10.dataProcessing.20.levels = 3
 #=========================================================#
 
 [{$pizpalue.agency.siteMode} == 1]
-    @import 'EXT:user_pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
+  @import 'EXT:user_pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
 [END]
