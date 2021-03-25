@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die('Access denied.');
 
 /**
  * To easier locate code the closure defines it in the following order:
