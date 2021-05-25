@@ -37,7 +37,7 @@
         "typo3/cms-lowlevel": "^10.4 || dev-master",
         "typo3/cms-redirects": "^10.4 || dev-master",
         "buepro/typo3-pizpalue": "^11.4.1 || dev-master",
-        "buepro/typo3-container-elements": "^1.0.0 || dev-master"
+        "buepro/typo3-container-elements": "^2.0.0 || dev-master"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
