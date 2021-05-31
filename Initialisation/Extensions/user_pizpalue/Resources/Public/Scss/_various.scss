@@ -8,13 +8,12 @@
 
 @include media-breakpoint-up(lg) {
     html {
-        font-size: 1.25 * $font-size-base;
+        font-size: 1.125 * $font-size-base;
     }
 }
 
 ul.list-normal {
     padding-left: 1.5rem;
-
     li {
         margin-bottom: 0.5rem;
     }
@@ -28,42 +27,14 @@ ul.list-normal {
         border: none;
     }
 }
+.carousel-item-type-header, .carousel-item-type-text_and_image {
+    .carousel-header, .carousel-subheader, .carousel-text {
+        @include pp-make-text-shadow-outline();
+    }
+}
 @include media-breakpoint-down(sm) {
     .textmedia-gallery, .textpic-gallery {
         margin-bottom: 1.7rem;
-    }
-}
-
-//
-// Header
-//
-@media (min-width: $pp-header-overlay-breakpoint) {
-    .navbar-mainnavigation.navbar-default-transition:not(.navbar-transition),
-    .navbar-mainnavigation.navbar-inverse-transition:not(.navbar-transition){
-        .navbar-nav > li > .nav-link::before {
-            background: white;
-        }
-    }
-}
-
-//
-// Footer
-//
-@include media-breakpoint-down(xs) {
-    footer {
-        .text-right, .text-center, .sociallinks-list, .footer-section-meta {
-            text-align: left !important;
-        }
-    }
-}
-@include media-breakpoint-down(md) {
-    footer .ppc-middle .frame-default {
-        padding-top: 0;
-    }
-}
-@include media-breakpoint-down(xs) {
-    footer .ppc-right .frame-default {
-        padding-top: 0;
     }
 }
 
@@ -77,17 +48,7 @@ ul.list-normal {
         padding: 1em;
         margin: 1.5em 0;
     }
-
     legend {
         margin-bottom: 1em;
-    }
-}
-
-//
-// Carousel
-//
-.carousel-item-type-header, .carousel-item-type-text_and_image {
-    .carousel-header, .carousel-subheader, .carousel-text {
-        @include pp-make-text-shadow-outline();
     }
 }

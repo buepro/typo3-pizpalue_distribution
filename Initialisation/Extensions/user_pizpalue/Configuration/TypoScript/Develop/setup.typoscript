@@ -5,3 +5,22 @@
 page {
   includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
 }
+
+
+#=========================================================#
+# Plugins
+#=========================================================#
+
+plugin.tx_seo {
+  config {
+    xmlSitemap {
+      sitemaps {
+        pages {
+          config {
+            additionalWhere = AND (title = 'In Arbeit')
+          }
+        }
+      }
+    }
+  }
+}

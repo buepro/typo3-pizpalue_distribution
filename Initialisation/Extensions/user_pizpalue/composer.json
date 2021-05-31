@@ -21,7 +21,7 @@
 		}
 	],
 	"require": {
-		"typo3/cms-core": ">=10.4"
+		"typo3/cms-core": ">=10.4.11"
 	},
 	"replace": {
 		"buepro/typo3-user-pizpalue": "self.version"

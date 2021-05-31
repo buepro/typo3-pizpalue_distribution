@@ -160,7 +160,8 @@ For smaller projects the following workflow might be of interest:
 - Use
   the [coding guidelines defined by TYPO3](https://docs.typo3.org/typo3cms/CoreApiReference/CodingGuidelines/Index.html)
   .
-- Use **up, Up, up-, upc-** as package related prefixes
+- Use **up, Up, up-, upc-** as package related prefixes where `upc-` is mainly used for complementary css classes used
+  together with other selectors (e.g. `.up-example .upc-red { ... }`)
 
 ## Frequently used
 
