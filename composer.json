@@ -32,18 +32,18 @@
     "require": {
         "buepro/typo3-bookmark-pages": "^2.0.1",
         "buepro/typo3-container-elements": "^2.0.0",
-        "buepro/typo3-pizpalue": "^11.6.1 || 12.*.*@dev || dev-master",
+        "buepro/typo3-pizpalue": "^11.6.1",
         "buepro/typo3-timelog": "^1.6",
         "friendsoftypo3/tt-address": "^5.2.1",
         "georgringer/eventnews": "^4.0",
         "georgringer/news": "^8.5.2",
         "svewap/ws-flexslider": "^1.5",
-        "typo3/cms-core": "^10.4.11 || 11.*.*@dev",
-        "typo3/cms-impexp": "^10.4 || 11.*.*@dev",
-        "typo3/cms-indexed-search": "^10.4 || 11.*.*@dev",
-        "typo3/cms-lowlevel": "^10.4 || 11.*.*@dev",
-        "typo3/cms-recycler": "^10.4 || 11.*.*@dev",
-        "typo3/cms-redirects": "^10.4 || 11.*.*@dev"
+        "typo3/cms-core": "^10.4.11",
+        "typo3/cms-impexp": "^10.4",
+        "typo3/cms-indexed-search": "^10.4",
+        "typo3/cms-lowlevel": "^10.4",
+        "typo3/cms-recycler": "^10.4",
+        "typo3/cms-redirects": "^10.4"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
