@@ -32,7 +32,7 @@ class ExtensionInstallService
      */
     public function afterExtensionInstall($extensionKey): void
     {
-        if ($extensionKey !== 'user_pizpalue') {
+        if ('user_pizpalue' !== (string) $extensionKey) {
             return;
         }
 
@@ -40,7 +40,7 @@ class ExtensionInstallService
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
         if ($extensionConfiguration->get('user_pizpalue', 'addAdditionalConfiguration')) {
             $force = (bool) $extensionConfiguration->get('user_pizpalue', 'forceAdditionalConfiguration');
-            $this->copyAdditionalConfiguration($force);
+//            $this->copyAdditionalConfiguration($force);
         }
     }
 
