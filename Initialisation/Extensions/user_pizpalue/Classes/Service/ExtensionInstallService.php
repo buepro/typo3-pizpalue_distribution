@@ -40,7 +40,7 @@ class ExtensionInstallService
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
         if ($extensionConfiguration->get('user_pizpalue', 'addAdditionalConfiguration')) {
             $force = (bool) $extensionConfiguration->get('user_pizpalue', 'forceAdditionalConfiguration');
-//            $this->copyAdditionalConfiguration($force);
+            $this->copyAdditionalConfiguration($force);
         }
     }
 
@@ -75,16 +75,18 @@ class ExtensionInstallService
         }
         GeneralUtility::upload_copy_move($source, $destination);
         // Notify
-        $message = GeneralUtility::makeInstance(FlashMessage::class,
-            $GLOBALS['LANG']->sL('LLL:EXT:user_pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.additionalConfigurationChanged'),
-            '',
-            FlashMessage::NOTICE,
-            true
-        );
-        $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
-        $messageQueue = $flashMessageService->getMessageQueueByIdentifier('extbase.flashmessages.tx_extensionmanager_tools_extensionmanagerextensionmanager');
-        /** @extensionScannerIgnoreLine */
-        $messageQueue->addMessage($message);
+        if (!Environment::isCli()) {
+            $message = GeneralUtility::makeInstance(FlashMessage::class,
+                $GLOBALS['LANG']->sL('LLL:EXT:user_pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.additionalConfigurationChanged'),
+                '',
+                FlashMessage::NOTICE,
+                true
+            );
+            $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
+            $messageQueue = $flashMessageService->getMessageQueueByIdentifier('extbase.flashmessages.tx_extensionmanager_tools_extensionmanagerextensionmanager');
+            /** @extensionScannerIgnoreLine */
+            $messageQueue->addMessage($message);
+        }
         // @todo Confirm copying went correctly
         return true;
     }
