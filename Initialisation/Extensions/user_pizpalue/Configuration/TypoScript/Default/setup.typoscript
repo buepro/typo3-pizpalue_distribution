@@ -53,15 +53,27 @@ page {
   #---------------------------------------------------------#
   includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/custom.scss
   #:::::::::::::::::::::::
-  #: Add own icon font containing pizpalue icons
+  #: Add own icon font (containing pizpalue icons) and additional fonts
   #.
 #  includeCSSLibs {
 #    pizpalueicon >
-#    upicon = EXT:user_pizpalue/Resources/Public/Fonts/upicon.min.css
-#    upicon {
+#    upIcon = EXT:user_pizpalue/Resources/Public/Fonts/upicon.min.css
+#    upIcon {
 #      fontLoader {
 #        families {
 #          0 = UpIcon
+#        }
+#        enabled = 1
+#      }
+#    }
+#    upFonts = https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap
+#    upFonts {
+#      external = 1
+#      disableCompression = 1
+#      excludeFromConcatenation = 1
+#      fontLoader {
+#        families {
+#          0 = Rouge+Script
 #        }
 #        enabled = 1
 #      }
