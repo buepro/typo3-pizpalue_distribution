@@ -34,7 +34,7 @@
 		{
 			"@type": "WebPage",
 			"headline": "{parentData:field:seo_title}",
-			"description": "{parentData:field:description}",
+			"description":"{func:newLineToRn:{parentData:field:description}}",
 			"breadcrumb": {processedData: breadcrumb}
 		}
 	]
