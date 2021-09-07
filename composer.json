@@ -30,20 +30,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "buepro/typo3-bookmark-pages": "^2.0.1",
-        "buepro/typo3-container-elements": "^2.0.0",
-        "buepro/typo3-pizpalue": "^11.6.1 || 12.*.*@dev || dev-master",
-        "buepro/typo3-timelog": "^1.6",
-        "friendsoftypo3/tt-address": "^5.2.1",
-        "georgringer/eventnews": "^4.0",
-        "georgringer/news": "^8.5.2",
-        "svewap/ws-flexslider": "^1.5",
-        "typo3/cms-core": "^10.4.11 || 11.*.*@dev",
-        "typo3/cms-impexp": "^10.4 || 11.*.*@dev",
-        "typo3/cms-indexed-search": "^10.4 || 11.*.*@dev",
-        "typo3/cms-lowlevel": "^10.4 || 11.*.*@dev",
-        "typo3/cms-recycler": "^10.4 || 11.*.*@dev",
-        "typo3/cms-redirects": "^10.4 || 11.*.*@dev"
+        "buepro/typo3-container-elements": "^3.0.0",
+        "buepro/typo3-pizpalue": "^12.0.0",
+        "buepro/typo3-timelog": "^1.7.0",
+        "friendsoftypo3/tt-address": "^5.2.1 || dev-master",
+        "georgringer/news": "^8.5.2 || dev-master",
+        "typo3/cms-base-distribution": "^11.3.0",
+        "typo3/cms-indexed-search": "^11.3.0",
+        "typo3/cms-lowlevel": "^11.3.0",
+        "typo3/cms-recycler": "^11.3.0",
+        "typo3/cms-redirects": "^11.3.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
@@ -60,6 +56,9 @@
     "extra": {
         "typo3/cms": {
             "extension-key": "pizpalue_distribution"
+        },
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
         }
     }
 }

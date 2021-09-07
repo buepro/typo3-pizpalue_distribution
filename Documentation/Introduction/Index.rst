@@ -40,6 +40,16 @@ Additional features are ready to be used and just need to be activated by instal
 
 Discover the functionality by browsing through the `demo site <https://www.pizpalue.buechler.pro/>`__.
 
+Version overview
+================
+
+========  ===============
+Version   TYPO3 version
+========  ===============
+2.x       10.x
+3.x       11.x
+========  ===============
+
 Screenshots
 ===========
 
