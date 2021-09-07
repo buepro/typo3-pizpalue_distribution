@@ -214,11 +214,11 @@ plugin.bootstrap_package.settings.scss {
 #  navbar-light-disabled-bg = transparent
 #  subnav-hover-bg = #f2f2f2
 #  subnav-active-bg = $link-color
-#  footer-color = pp-contrast($footer-bg)
+#  footer-color = color-contrast($footer-bg)
 #  footer-link-color = mix($primary,$footer-color,30%)
 #  footer-link-hover-color = lighten($footer-link-color, 10%)
 #  footer-link-hover-decoration = none
-#  footer-meta-color = pp-contrast($footer-meta-bg)
+#  footer-meta-color = color-contrast($footer-meta-bg)
 #  footer-meta-link-color = mix($primary,$footer-meta-color,30%)
 #  footer-meta-link-hover-color = lighten($footer-meta-link-color, 10%)
 #  footer-meta-link-hover-decoration = none

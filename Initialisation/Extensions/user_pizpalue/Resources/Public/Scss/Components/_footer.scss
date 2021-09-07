@@ -1,0 +1,23 @@
+@include media-breakpoint-down(sm) {
+    #page-footer {
+        .text-right, .text-center, .sociallinks-list, .footer-section-meta {
+            text-align: left !important;
+        }
+        .ppc-right .frame-default {
+            padding-top: 0;
+        }
+        .sociallinks-list {
+            justify-content: flex-start;
+        }
+    }
+}
+@include media-breakpoint-down(lg) {
+    #page-footer .ppc-middle .frame-default {
+        padding-top: 0;
+    }
+}
+.footer-info-section {
+    > div:nth-child(n+2) {
+        margin-top: calc(0.5 * var(--pp-frame-spacing));
+    }
+}

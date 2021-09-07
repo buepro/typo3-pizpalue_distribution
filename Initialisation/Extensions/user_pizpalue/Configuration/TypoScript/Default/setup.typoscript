@@ -39,8 +39,11 @@ lib.contentElement {
 # Config
 #=========================================================#
 
-# Don't include the template site title into the title tag
-config.pageTitle.stdWrap.override.field = seo_title // title
+config {
+  # Don't include the template site title into the title tag
+  pageTitle.stdWrap.override.field = seo_title // title
+  cache_clearAtMidnight = 1
+}
 
 
 #=========================================================#
@@ -51,7 +54,7 @@ page {
   #---------------------------------------------------------#
   # CSS/Scss
   #---------------------------------------------------------#
-  includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/custom.scss
+  includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/theme.scss
   #:::::::::::::::::::::::
   #: Add own icon font (containing pizpalue icons) and additional fonts
   #.
