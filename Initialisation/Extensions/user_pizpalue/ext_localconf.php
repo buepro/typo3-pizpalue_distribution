@@ -49,6 +49,12 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
+     * Adjust RTE
+     */
+//    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['user_pizpalue'] = 'EXT:user_pizpalue/Configuration/RTE/Default.yaml';
+//    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = user_pizpalue');
+
+    /**
      * EXT:form
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {

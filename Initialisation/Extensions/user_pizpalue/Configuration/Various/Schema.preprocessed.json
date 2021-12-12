@@ -33,7 +33,7 @@
 		},
 		{
 			"@type": "WebPage",
-			"headline": "{parentData:field:seo_title}",
+			"headline":"{parentData:field:seo_title // field:title}",
 			"description":"{func:newLineToRn:{parentData:field:description}}",
 			"breadcrumb": {processedData: breadcrumb}
 		}

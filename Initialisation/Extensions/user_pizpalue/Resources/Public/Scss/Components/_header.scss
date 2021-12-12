@@ -1,3 +1,14 @@
+//.navbar-mainnavigation .navbar-brand-image {
+//    padding-top: 10px;
+//    padding-bottom: 10px;
+//    img {
+//        max-height: map-get($navbar-heights, xs) - 30;
+//        @media (min-width: $grid-float-breakpoint) {
+//            max-height: 65%;
+//        }
+//    }
+//}
+
 @media (min-width: $pp-header-overlay-breakpoint) {
     .navbar-mainnavigation.navbar-default-transition:not(.navbar-transition),
     .navbar-mainnavigation.navbar-inverse-transition:not(.navbar-transition) {

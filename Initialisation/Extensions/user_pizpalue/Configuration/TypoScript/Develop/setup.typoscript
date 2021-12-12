@@ -3,7 +3,7 @@
 #=========================================================#
 
 page {
-  includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
+    includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
 }
 
 
@@ -12,15 +12,15 @@ page {
 #=========================================================#
 
 plugin.tx_seo {
-  config {
-    xmlSitemap {
-      sitemaps {
-        pages {
-          config {
-            additionalWhere = AND (title = 'In Arbeit')
-          }
+    config {
+        xmlSitemap {
+            sitemaps {
+                pages {
+                    config {
+                        additionalWhere = AND (title = 'In Arbeit')
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }

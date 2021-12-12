@@ -1,7 +1,7 @@
 {
 	"name": "buepro/typo3-user-pizpalue",
 	"type": "typo3-cms-extension",
-	"description": "TYPO3 Custom template being used with template pizpalue.",
+	"description": "TYPO3 site package for pizpalue.",
 	"keywords": [
 		"TYPO3 CMS",
 		"bootstrap",
@@ -21,17 +21,44 @@
 		}
 	],
 	"require": {
+		"buepro/typo3-pizpalue": ">=12.0.0",
 		"typo3/cms-core": ">=10.4.11"
 	},
 	"replace": {
-		"buepro/typo3-user-pizpalue": "self.version"
+		"buepro/typo3-user-pizpalue": "self.version",
+		"typo3-ter/user-pizpalue": "self.version"
 	},
 	"require-dev": {
-		"friendsofphp/php-cs-fixer": "^2.16.3"
+		"buepro/typo3-pizpalue": "^12.0.0",
+		"ergebnis/composer-normalize": "^2.15.0",
+		"friendsofphp/php-cs-fixer": "^3.0.0",
+		"friendsoftypo3/phpstan-typo3": "^0.8.1",
+		"helhum/typo3-console": "^6.6 || ^7.0.2",
+		"helmich/typo3-typoscript-lint": "^2.1.1",
+		"j13k/yaml-lint": "1.1.x-dev",
+		"overtrue/phplint": "^2.3.5",
+		"phpstan/phpstan": "^0.12.87",
+		"phpstan/phpstan-deprecation-rules": "^0.12.6",
+		"phpstan/phpstan-phpunit": "^0.12.19",
+		"phpstan/phpstan-strict-rules": "^0.12.9",
+		"roave/security-advisories": "dev-latest",
+		"seld/jsonlint": "^1.8",
+		"typo3/cms-base-distribution": "^10.4 || ^11.5",
+		"typo3/cms-impexp": "^10.4 || ^11.5",
+		"typo3/cms-lowlevel": "^10.4 || ^11.5",
+		"typo3/cms-recycler": "^10.4 || ^11.5"
+	},
+	"config": {
+		"bin-dir": ".build/bin",
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"vendor-dir": ".build/vendor"
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "user_pizpalue"
+			"app-dir": ".build",
+			"extension-key": "user_pizpalue",
+			"web-dir": ".build/public"
 		}
 	},
 	"autoload": {
@@ -39,7 +66,71 @@
 			"Buepro\\UserPizpalue\\": "Classes"
 		}
 	},
+	"minimum-stability": "dev",
 	"prefer-stable": true,
+	"scripts": {
+		"post-autoload-dump": [
+			"mkdir -p .build/public/typo3conf/ext/",
+			"[ -L .build/public/typo3conf/ext/user_pizpalue ] || ln -snvf ../../../../. .build/public/typo3conf/ext/user_pizpalue",
+			"mkdir -p .build/config/sites/default",
+			"[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
+		],
+		"ci": [
+			"@ci:static"
+		],
+		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:json:lint": "find . ! -path './.build/*' ! -path './Build/node_modules' ! -name '*.preprocessed.json' -name '*.json' | xargs php ./.build/bin/jsonlint -q",
+		"ci:php:cs": [
+			"php-cs-fixer --diff -v --dry-run fix"
+		],
+		"ci:php:lint": [
+			"phplint"
+		],
+		"ci:php:stan": [
+			"phpstan analyze --configuration ./Build/phpstan.neon"
+		],
+		"ci:static": [
+			"@ci:composer:normalize",
+			"@ci:json:lint",
+			"@ci:php:cs-fixer",
+			"@ci:php:lint",
+			"@ci:php:stan",
+			"@ci:yaml:lint"
+		],
+		"ci:yaml:lint": "find . ! -path './.build/*' ! -path './Build/node_modules/*' ! -path './.ddev/*' \\( -name '*.yml' -o -name '*.yaml' \\) | xargs php ./.build/bin/yaml-lint",
+		"ddev:install": [
+			"composer install",
+			"ddev start",
+			"ddev composer site:install",
+			"ddev launch typo3",
+			"echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
+		],
+		"ddev:uninstall": [
+			"ddev composer typo3cms:database:export",
+			"ddev delete",
+			"rm -rf .build/"
+		],
+		"fix": [
+			"@fix:php:cs"
+		],
+		"fix:php:cs": [
+			"php-cs-fixer --diff -v fix"
+		],
+		"site:install": [
+			"@typo3cms:install:setup",
+			"@typo3cms:database:import"
+		],
+		"typo3cms:database:export": [
+			".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
+			"ls -l Build/site/db.sql.gz"
+		],
+		"typo3cms:database:import": [
+			"gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
+		],
+		"typo3cms:install:setup": [
+			".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='user-pizpalue dev' --web-server-config='apache'"
+		]
+	},
 	"support": {
 		"issues": "https://github.com/buepro/typo3-user_pizpalue/issues",
 		"source": "https://github.com/buepro/typo3-user_pizpalue"

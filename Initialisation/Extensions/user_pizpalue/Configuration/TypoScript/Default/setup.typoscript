@@ -3,35 +3,65 @@
 #=========================================================#
 
 lib.contentElement {
-  layoutRootPaths {
-    30 = {$user_pizpalue.contentElement.fluidtemplate.layoutRootPath}
-  }
+    layoutRootPaths {
+        30 = {$user_pizpalue.contentElement.fluidtemplate.layoutRootPath}
+    }
 
-  templateRootPaths {
-    30 = {$user_pizpalue.contentElement.fluidtemplate.templateRootPath}
-  }
+    templateRootPaths {
+        30 = {$user_pizpalue.contentElement.fluidtemplate.templateRootPath}
+    }
 
-  partialRootPaths {
-    30 = {$user_pizpalue.contentElement.fluidtemplate.partialRootPath}
-  }
+    partialRootPaths {
+        30 = {$user_pizpalue.contentElement.fluidtemplate.partialRootPath}
+    }
 
-  #:::::::::::::::::::::::
-  #: Set maximum image resolution(s)
-  #.
-#  settings {
-#    responsiveimages {
-#      variants {
-#        default {
-#          breakpoint = 1200
-#          width = 1800
+    #:::::::::::::::::::::::
+    #: Adjust maximum image resolution(s)
+    #: Check as well TS constants for grid breakpoints (plugin.bootstrap_package.settings.scss.grid-breakpoints)
+    #.
+#    settings {
+#        responsiveimages {
+#            variants {
+#                default {
+#                    breakpoint = 1600
+#                    width = 1520
+#                }
+#
+#                xlarge {
+#                    breakpoint = 1200
+#                    width = 1140
+#                }
+#
+#                large {
+#
+#                }
+#
+#                medium {
+#
+#                }
+#
+#                small {
+#
+#                }
+#
+#                extrasmall {
+#
+#                }
+#            }
+#
+#            pageVariants {
+#                default {
+#                    breakpoint = 1600
+#                    width = 2200
+#                }
+#
+#                xlarge {
+#                    breakpoint = 1200
+#                    width = 1600
+#                }
+#            }
 #        }
-#        large {}
-#        medium {}
-#        small {}
-#        extrasmall {}
-#      }
 #    }
-#  }
 }
 
 
@@ -40,9 +70,7 @@ lib.contentElement {
 #=========================================================#
 
 config {
-  # Don't include the template site title into the title tag
-  pageTitle.stdWrap.override.field = seo_title // title
-  cache_clearAtMidnight = 1
+    cache_clearAtMidnight = 1
 }
 
 
@@ -51,51 +79,38 @@ config {
 #=========================================================#
 
 page {
-  #---------------------------------------------------------#
-  # CSS/Scss
-  #---------------------------------------------------------#
-  includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/theme.scss
-  #:::::::::::::::::::::::
-  #: Add own icon font (containing pizpalue icons) and additional fonts
-  #.
-#  includeCSSLibs {
-#    pizpalueicon >
-#    upIcon = EXT:user_pizpalue/Resources/Public/Fonts/upicon.min.css
-#    upIcon {
-#      fontLoader {
-#        families {
-#          0 = UpIcon
+    #---------------------------------------------------------#
+    # CSS/Scss
+    #---------------------------------------------------------#
+    includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/theme.scss
+    #:::::::::::::::::::::::
+    #: Add own icon font (containing pizpalue icons) and additional fonts
+    #.
+#    includeCSSLibs {
+#        pizpalueicon >
+#        upIcon = EXT:user_pizpalue/Resources/Public/Fonts/upicon.min.css
+#
+#        upFonts = https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap
+#        upFonts {
+#            external = 1
+#            disableCompression = 1
+#            excludeFromConcatenation = 1
 #        }
-#        enabled = 1
-#      }
 #    }
-#    upFonts = https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap
-#    upFonts {
-#      external = 1
-#      disableCompression = 1
-#      excludeFromConcatenation = 1
-#      fontLoader {
-#        families {
-#          0 = Rouge+Script
-#        }
-#        enabled = 1
-#      }
-#    }
-#  }
 
-  #---------------------------------------------------------#
-  # JS
-  #---------------------------------------------------------#
-#  includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
+    #---------------------------------------------------------#
+    # JS
+    #---------------------------------------------------------#
+#    includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
 
-  #---------------------------------------------------------#
-  # Template
-  #---------------------------------------------------------#
-  10 {
-    layoutRootPaths.3 = {$user_pizpalue.page.fluidtemplate.layoutRootPath}
-    templateRootPaths.3 = {$user_pizpalue.page.fluidtemplate.templateRootPath}
-    partialRootPaths.3 = {$user_pizpalue.page.fluidtemplate.partialRootPath}
-  }
+    #---------------------------------------------------------#
+    # Template
+    #---------------------------------------------------------#
+    10 {
+        layoutRootPaths.3 = {$user_pizpalue.page.fluidtemplate.layoutRootPath}
+        templateRootPaths.3 = {$user_pizpalue.page.fluidtemplate.templateRootPath}
+        partialRootPaths.3 = {$user_pizpalue.page.fluidtemplate.partialRootPath}
+    }
 }
 
 
@@ -105,11 +120,11 @@ page {
 
 #page.910 = CONTENT
 #page.910 {
-#  table = tt_content
-#  select {
-#    pidInList = 81
-#    uidInList = 786
-#  }
+#    table = tt_content
+#    select {
+#        pidInList = 81
+#        uidInList = 786
+#    }
 #}
 
 
@@ -125,6 +140,12 @@ page.10.dataProcessing.20.levels = 3
 # Development settings
 #=========================================================#
 
-[{$pizpalue.agency.siteMode} == 1]
-  @import 'EXT:user_pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
+[{$pizpalue.agency.siteMode} == 1 || {$pizpalue.agency.siteMode} == 2]
+    @import 'EXT:user_pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
+[END]
+
+# Limit seo if not on customer domain (e.g. when using temporary domain for site creation)
+[site("base").getHost() != "{$pizpalue.customer.domain}" && site("base").getHost() != "www.{$pizpalue.customer.domain}"]
+    page.meta.robots = noindex,nofollow
+    @import 'EXT:pizpalue/Configuration/TypoScript/Develop/Indicator.typoscript'
 [END]
