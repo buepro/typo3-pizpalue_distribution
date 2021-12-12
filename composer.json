@@ -1,23 +1,20 @@
 {
     "name": "buepro/typo3-pizpalue-distribution",
-    "type": "typo3-cms-extension",
     "description": "This TYPO3 distribution provides a sample website using bootstrap and the extensions pizpalue and container_elements. The distribution tailors Swiss market featuring German as default language and additional translations to French, English and Finnish.",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "type": "typo3-cms-extension",
     "keywords": [
         "TYPO3 CMS",
         "distribution",
         "bootstrap",
-        "responsive",
         "frontend",
         "theme",
-        "web",
         "news",
-        "calendar",
         "container",
-        "gridelements",
-        "flux",
         "timelog"
     ],
-    "homepage": "https://github.com/buepro/typo3-pizpalue_distribution",
     "authors": [
         {
             "name": "Roman Büchler",
@@ -26,14 +23,11 @@
             "role": "Developer"
         }
     ],
-    "license": ["GPL-2.0-or-later"],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "homepage": "https://github.com/buepro/typo3-pizpalue_distribution",
     "require": {
         "buepro/typo3-container-elements": "^3.0.0",
         "buepro/typo3-pizpalue": "^12.0.0",
-        "buepro/typo3-timelog": "^1.7.0",
-        "friendsoftypo3/tt-address": "^5.2.1 || dev-master",
+        "buepro/typo3-user-pizpalue": "^2.0.0",
         "georgringer/news": "^8.5.2 || dev-master",
         "typo3/cms-base-distribution": "^11.3.0",
         "typo3/cms-indexed-search": "^11.3.0",
@@ -42,23 +36,102 @@
         "typo3/cms-redirects": "^11.3.0"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
-    },
-    "autoload": {
-        "psr-4": {
-            "Buepro\\PizpalueDistribution\\": "Classes/"
-        }
+        "ergebnis/composer-normalize": "^2.15.0",
+        "friendsofphp/php-cs-fixer": "^3.0.0",
+        "friendsoftypo3/phpstan-typo3": "^0.8.1",
+        "overtrue/phplint": "^2.3.5",
+        "phpstan/phpstan": "^0.12.87",
+        "phpstan/phpstan-deprecation-rules": "^0.12.6",
+        "phpstan/phpstan-phpunit": "^0.12.19",
+        "phpstan/phpstan-strict-rules": "^0.12.9",
+        "roave/security-advisories": "dev-latest"
     },
     "replace": {
         "buepro/typo3-pizpalue-distribution": "self.version",
         "typo3-ter/pizpalue-distribution": "self.version"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Buepro\\PizpalueDistribution\\": "Classes/"
+        }
+    },
+    "config": {
+        "bin-dir": ".build/bin",
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "vendor-dir": ".build/vendor"
+    },
     "extra": {
-        "typo3/cms": {
-            "extension-key": "pizpalue_distribution"
-        },
         "branch-alias": {
             "dev-master": "3.0.x-dev"
+        },
+        "typo3/cms": {
+            "app-dir": ".build",
+            "extension-key": "pizpalue_distribution",
+            "web-dir": ".build/public"
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p .build/public/typo3conf/ext/",
+            "[ -L .build/public/typo3conf/ext/pizpalue_distribution ] || ln -snvf ../../../../. .build/public/typo3conf/ext/pizpalue_distribution",
+            "mkdir -p .build/config/sites/default",
+            "[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
+        ],
+        "ci": [
+            "@ci:static"
+        ],
+        "ci:composer:normalize": "@composer normalize --dry-run",
+        "ci:php:cs": [
+            "php-cs-fixer --diff -v --dry-run fix"
+        ],
+        "ci:php:lint": [
+            "phplint"
+        ],
+        "ci:php:stan": [
+            "phpstan analyze --configuration Build/phpstan.neon"
+        ],
+        "ci:static": [
+            "@ci:composer:normalize",
+            "@ci:php:cs",
+            "@ci:php:lint",
+            "@ci:php:stan"
+        ],
+        "ddev:install": [
+            "composer install",
+            "ddev start",
+            "ddev composer site:install",
+            "ddev launch typo3",
+            "echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
+        ],
+        "ddev:uninstall": [
+            "ddev composer typo3cms:database:export",
+            "ddev delete",
+            "rm -rf .build/"
+        ],
+        "fix": [
+            "@fix:composer:normalize",
+            "@fix:php:cs"
+        ],
+        "fix:composer:normalize": "@composer normalize",
+        "fix:php:cs": [
+            "php-cs-fixer --diff -v fix"
+        ],
+        "site:install": [
+            "@typo3cms:install:setup",
+            "@typo3cms:database:import"
+        ],
+        "typo3cms:database:export": [
+            ".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
+            "ls -l Build/site/db.sql.gz"
+        ],
+        "typo3cms:database:import": [
+            "gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
+        ],
+        "typo3cms:install:setup": [
+            ".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='pizpalue-distribution dev' --web-server-config='apache'"
+        ]
     }
 }
