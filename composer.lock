@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ee32ff0c9dabcd65c284b9524da73ab",
+    "content-hash": "03f5af5284dcfd0af747e936e36e7168",
     "packages": [
         {
             "name": "b13/container",
@@ -1368,16 +1368,16 @@
         },
         {
             "name": "georgringer/news",
-            "version": "dev-master",
+            "version": "9.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/georgringer/news.git",
-                "reference": "2e79c284ae54fd6beb87b866d88203791b03e037"
+                "reference": "3123d005731be78a850742472bdcb93585f531e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/georgringer/news/zipball/2e79c284ae54fd6beb87b866d88203791b03e037",
-                "reference": "2e79c284ae54fd6beb87b866d88203791b03e037",
+                "url": "https://api.github.com/repos/georgringer/news/zipball/3123d005731be78a850742472bdcb93585f531e1",
+                "reference": "3123d005731be78a850742472bdcb93585f531e1",
                 "shasum": ""
             },
             "require": {
@@ -1397,7 +1397,6 @@
                 "georgringer/numbered-pagination": "Improved pagination API",
                 "reelworx/rx-shariff": "GDPR compliant social sharing"
             },
-            "default-branch": true,
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
@@ -1431,7 +1430,7 @@
             ],
             "support": {
                 "issues": "https://github.com/georgringer/news/issues",
-                "source": "https://github.com/georgringer/news/tree/master"
+                "source": "https://github.com/georgringer/news/tree/9.1.0"
             },
             "funding": [
                 {
@@ -1443,7 +1442,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-12-12T10:39:17+00:00"
+            "time": "2021-11-11T18:04:01+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -9486,7 +9485,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "georgringer/news": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
