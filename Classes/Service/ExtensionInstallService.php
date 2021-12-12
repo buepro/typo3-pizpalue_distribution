@@ -13,7 +13,9 @@ namespace Buepro\PizpalueDistribution\Service;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\MathUtility;
 use TYPO3\CMS\Extensionmanager\Utility\InstallUtility;
 
 class ExtensionInstallService
@@ -44,29 +46,30 @@ class ExtensionInstallService
             }
         }
         $installUtility = GeneralUtility::makeInstance(InstallUtility::class);
-        if (!$installUtility->isLoaded('user_pizpalue')) {
+        if (!ExtensionManagementUtility::isLoaded('user_pizpalue')) {
             $installUtility->reloadAvailableExtensions();
             $installUtility->install('user_pizpalue');
         }
-        return $installUtility->isLoaded('user_pizpalue');
+        return ExtensionManagementUtility::isLoaded('user_pizpalue');
     }
 
     /**
      * Handles the installation from the extension user_pizpalue as well as the copying from a default
      * site configuration.
      *
-     * @param $extensionKey
+     * @param string $extensionKey
      * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
      * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      * @throws \TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException
      */
-    public function afterExtensionInstall($extensionKey)
+    public function afterExtensionInstall(string $extensionKey): void
     {
         if ($extensionKey !== 'pizpalue_distribution') {
             return;
         }
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
-        if ($extensionConfiguration->get('pizpalue_distribution', 'installUserExtension')) {
+        $installUserExtension = $extensionConfiguration->get('pizpalue_distribution', 'installUserExtension');
+        if (MathUtility::canBeInterpretedAsInteger($installUserExtension) && (int) $installUserExtension === 1) {
             $this->installUserExtension();
         }
     }
