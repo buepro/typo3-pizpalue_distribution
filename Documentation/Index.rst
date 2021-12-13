@@ -27,7 +27,7 @@ Distribution pizpalue
       pizpalue, distribution, bootstrap, bootstrap_package
 
    :Copyright:
-      2020
+      since 2020
 
    :Author:
       Roman Büchler
@@ -56,3 +56,4 @@ Distribution pizpalue
    Administration/Index
    Configuration/Index
    FAQ/Index
+   Changelog/Index

@@ -15,30 +15,23 @@ Description
 This distribution extension installs a bootstrap based web site using the
 `template extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__.
 
-The web site features everything needed for private or corporate use. It is tailored to the Swiss market featuring
-German as default language and additional translations to French, English and Finnish.
+The web site features everything needed for private or corporate use. It is
+tailored to the Swiss market featuring German as default language and additional
+translations to French, English and Finnish.
 
-This distribution mainly provides the pages and content of the website and its configuration. The functionality is
-primarily provided by the `extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__, which provides
+This distribution mainly provides the pages and content of the website and its
+configuration. The functionality is primarily provided by the `extension
+pizpalue <https://extensions.typo3.org/extension/pizpalue>`__, which provides
 new features and complements other extensions.
 
 The following extensions complement this distribution:
 
-- `container_elements <https://extensions.typo3.org/extension/container_elements>`__, structure elements
-- `news <https://extensions.typo3.org/extension/news>`__, news system
-- `eventnews <https://extensions.typo3.org/extension/eventnews>`__, news system
-- `tt_address <https://extensions.typo3.org/extension/tt_address>`__, address lists
-- `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__, carousel
-- `timelog <https://extensions.typo3.org/extension/timelog>`__, time and activity registration for projects
+-  `container_elements <https://extensions.typo3.org/extension/container_elements>`__,
+   structure elements
+-  `news <https://extensions.typo3.org/extension/news>`__, news system
 
-Additional features are ready to be used and just need to be activated by installing the related extension:
-
-- `indexed_search <https://docs.typo3.org/c/typo3/cms-indexed-search/master/en-us/>`__, website search
-- `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__, structure elements
-- `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__, structure elements
-- `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__, carousel
-
-Discover the functionality by browsing through the `demo site <https://www.pizpalue.buechler.pro/>`__.
+Discover the functionality by browsing through the `demo site <https://www.
+pizpalue.buechler.pro/>`__.
 
 Version overview
 ================
@@ -46,14 +39,15 @@ Version overview
 ========  ===============
 Version   TYPO3 version
 ========  ===============
-2.x       10.x
 3.x       11.x
+2.x       10.x
 ========  ===============
 
 Screenshots
 ===========
 
-See as well `screenshots from pizpalue manual <https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/Introduction/Index.html#screenshots>`__
+See as well `screenshots from pizpalue manual <https://docs.typo3.org/p/buepro/
+typo3-pizpalue/master/en-us/Introduction/Index.html#screenshots>`__
 
 Landing page
 ------------
@@ -77,16 +71,8 @@ See as well `demo site <https://pizpalue.buechler.pro/das-plus/>`__.
 
 ----
 
-Timelog
--------
-
-See as well `demo site <https://pizpalue.buechler.pro/das-plus/timelog>`__
-
-.. figure:: ../Images/Introduction/Timelog.jpg
-   :width: 500px
-   :alt: Timelog
-
 Credits
 =======
 
-See `section credits from pizpalue manual <https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/Introduction/Index.html#credits>`__
+See `section credits from pizpalue manual <https://docs.typo3.org/p/buepro/
+typo3-pizpalue/master/en-us/Introduction/Index.html#credits>`__
