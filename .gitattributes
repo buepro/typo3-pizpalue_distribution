@@ -4,7 +4,10 @@
 
 # Hidden elements
 /.* export-ignore
+
+# Files
 RELEASE.md export-ignore
+composer.lock export-ignore
 
 # Enforce checkout with linux lf consistent over all plattforms
 *.xml text eol=lf
