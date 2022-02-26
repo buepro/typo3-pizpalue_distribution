@@ -58,7 +58,7 @@
             "extension-key": "pizpalue_distribution"
         },
         "branch-alias": {
-            "dev-2.1": "2.1.x-dev"
+            "dev-2.1": "2.0.x-dev"
         }
     }
 }

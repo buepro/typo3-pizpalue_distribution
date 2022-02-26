@@ -7,7 +7,7 @@ TYPO3 extension `pizpalue_distribution`
 Description
 ===========
 
-This distribution extension installs a bootstrap based web site using the
+This distribution extension installs a bootstrap based web site using TYPO3 10 LTS and the
 `template extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__.
 
 The web site features everything needed for private or corporate use. It is tailored to the Swiss market featuring
