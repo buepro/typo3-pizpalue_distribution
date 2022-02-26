@@ -33,7 +33,7 @@
         "buepro/typo3-bookmark-pages": "^2.0.1",
         "buepro/typo3-container-elements": "^3.0.0",
         "buepro/typo3-pizpalue": "~12.2.0",
-        "buepro/typo3-timelog": "^1.7.0",
+        "buepro/typo3-timelog": "^1.6.0",
         "buepro/typo3-user-pizpalue": "^2.0.1",
         "friendsoftypo3/tt-address": "^5.2.1",
         "georgringer/eventnews": "^4.0",
