@@ -39,7 +39,7 @@
         "georgringer/eventnews": "^4.0",
         "georgringer/news": "^8.5.2",
         "svewap/ws-flexslider": "^1.5",
-        "typo3/cms-base-distribution": "^10.4.20",
+        "typo3/cms-base-distribution": "^10.4.3",
         "typo3/cms-indexed-search": "^10.4.20",
         "typo3/cms-lowlevel": "^10.4.20",
         "typo3/cms-recycler": "^10.4.20",
