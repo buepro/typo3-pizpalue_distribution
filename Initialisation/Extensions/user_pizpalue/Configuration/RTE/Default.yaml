@@ -1,0 +1,2 @@
+imports:
+  - { resource: "EXT:pizpalue/Configuration/RTE/Default.yaml" }

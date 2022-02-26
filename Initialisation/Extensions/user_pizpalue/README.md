@@ -1,4 +1,4 @@
-# TYPO3 user_pizpalue
+# TYPO3 site package `user_pizpalue`
 
 [![Extension pizpalue](https://badgen.net/badge/TYPO3/pizpalue/orange)](https://extensions.typo3.org/extension/pizpalue/)
 [![Extension pizpalue_distribution](https://badgen.net/badge/TYPO3/pizpalue%20distribution/orange)](https://extensions.typo3.org/extension/pizpalue_distribution/)
@@ -6,7 +6,7 @@
 ---
 
 This extension serves as a base to customize a TYPO3-website using the template
-[pizpalue](https://github.com/buepro/typo3-pizpalue).
+[pizpalue](https://github.com/buepro/typo3-pizpalue) in version 12.0.0 and higher.
 
 ## Composer
 
@@ -94,14 +94,6 @@ page {
     includeCSSLibs {
         pizpalueicon >
         upicon = EXT:user_pizpalue/Resources/Public/Fonts/upicon.min.css
-        upicon {
-            fontLoader {
-                families {
-                    0 = UpIcon
-                }
-                enabled = 1
-            }
-        }
     }
 }
 ```
@@ -127,33 +119,10 @@ user_pizpalue {
 
 ## Development
 
-For smaller projects the following workflow might be of interest:
-
-### Setup development environment
-
-1. Adjust the header comment in `.php_cs.php`
-1. Create a ddev container: `ddev start`
-1. **Enter the container:** `docker exec -it -u root -w /var/www/html ddev-up-web bash`
-1. Set environment variable: `export COMPOSER=composer-dev.json && printenv | grep COMPOSER=`
-1. Install composer packages: `composer install`
-
-### Work in development environment
-
-1. Optional, check the code: `composer check:php`
-1. Correct the code: `composer fix:php`
-
-### Remove development environment
-
-1. Uninstall composer packages: `composer uninstall`
-1. Unset the environment variable: `unset COMPOSER | grep COMPOSER=`
-1. **Leave the container:** `exit`
-1. Stop the container: `ddev stop`
-
-### Available linters
-
-- TyposScript: `composer lint:ts`
-- Yml and yaml: `composer lint:yaml`
-- Json: `composer lint:json`
+- Install environment: `composer ddev:install`
+- Uninstall environment: `composer ddev:uninstall`
+- Test code: `ddev composer ci`
+- Fix code: `ddev composer fix`
 
 ## Coding guidelines
 

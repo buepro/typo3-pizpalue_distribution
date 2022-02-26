@@ -1,7 +1,7 @@
 //
 // General
 //
-h1, h2, h3 ,h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     word-break: normal;
     overflow-wrap: anywhere;
 }
@@ -51,4 +51,12 @@ ul.list-normal {
     legend {
         margin-bottom: 1em;
     }
+}
+
+//
+// Bootstrap package
+//
+.navbar-brand-text {
+    display: flex;
+    align-items: center;
 }

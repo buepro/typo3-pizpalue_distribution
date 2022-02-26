@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /*
  * This file is part of the package buepro/user_pizpalue.
@@ -26,19 +27,18 @@ class ExtensionInstallService
     /**
      * Handles copying the default file AdditionalConfiguration.php.
      *
-     * @param $extensionKey
      * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
      * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      */
-    public function afterExtensionInstall($extensionKey): void
+    public function afterExtensionInstall(string $extensionKey): void
     {
-        if ('user_pizpalue' !== (string) $extensionKey) {
+        if ('user_pizpalue' !== $extensionKey) {
             return;
         }
 
         // Add default `AdditionalConfiguration.php`
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
-        if ($extensionConfiguration->get('user_pizpalue', 'addAdditionalConfiguration')) {
+        if ((bool)$extensionConfiguration->get('user_pizpalue', 'addAdditionalConfiguration')) {
             $force = (bool) $extensionConfiguration->get('user_pizpalue', 'forceAdditionalConfiguration');
             $this->copyAdditionalConfiguration($force);
         }
@@ -76,7 +76,8 @@ class ExtensionInstallService
         GeneralUtility::upload_copy_move($source, $destination);
         // Notify
         if (!Environment::isCli()) {
-            $message = GeneralUtility::makeInstance(FlashMessage::class,
+            $message = GeneralUtility::makeInstance(
+                FlashMessage::class,
                 $GLOBALS['LANG']->sL('LLL:EXT:user_pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.additionalConfigurationChanged'),
                 '',
                 FlashMessage::NOTICE,
