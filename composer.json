@@ -27,7 +27,7 @@
 	"require": {
 		"buepro/typo3-container-elements": "^3.0.0",
 		"buepro/typo3-pizpalue": "~12.4.0",
-		"buepro/typo3-user-pizpalue": "^2.0.0 || dev-pizpalue",
+		"buepro/typo3-user-pizpalue": "^2.1.0 || dev-pizpalue",
 		"friendsoftypo3/tt-address": "^6.0.1",
 		"georgringer/news": "^9.1.0",
 		"georgringer/eventnews": "5.0.0",

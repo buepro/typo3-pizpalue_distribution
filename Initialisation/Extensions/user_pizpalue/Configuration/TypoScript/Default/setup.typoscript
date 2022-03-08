@@ -101,7 +101,7 @@ page {
     #---------------------------------------------------------#
     # JS
     #---------------------------------------------------------#
-#    includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
+#    includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Dist/general.min.js
 
     #---------------------------------------------------------#
     # Template

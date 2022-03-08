@@ -21,15 +21,10 @@
 		}
 	],
 	"require": {
-		"buepro/typo3-pizpalue": ">=12.0.0",
+		"buepro/typo3-pizpalue": ">=12.0.0 || dev-master || dev-BP-12.0",
 		"typo3/cms-core": ">=10.4.11"
 	},
-	"replace": {
-		"buepro/typo3-user-pizpalue": "self.version",
-		"typo3-ter/user-pizpalue": "self.version"
-	},
 	"require-dev": {
-		"buepro/typo3-pizpalue": "^12.0.0",
 		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.8.1",
@@ -55,6 +50,9 @@
 		"vendor-dir": ".build/vendor"
 	},
 	"extra": {
+		"branch-alias": {
+			"dev-master": "2.1.x-dev"
+		},
 		"typo3/cms": {
 			"app-dir": ".build",
 			"extension-key": "user_pizpalue",

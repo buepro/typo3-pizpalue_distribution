@@ -3,7 +3,7 @@
 #=========================================================#
 
 page {
-    includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
+    includeJSFooter.upGeneral = EXT:user_pizpalue/Resources/Public/JavaScript/Src/general.js
 }
 
 

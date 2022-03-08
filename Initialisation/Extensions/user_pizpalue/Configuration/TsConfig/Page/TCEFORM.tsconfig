@@ -1,0 +1,5 @@
+#TCEFORM.tx_bootstrappackage_carousel_item.layout {
+#    addItems {
+#        up-impressions = Impressionen
+#    }
+#}
