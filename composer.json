@@ -26,9 +26,10 @@
 	"homepage": "https://github.com/buepro/typo3-pizpalue_distribution",
 	"require": {
 		"buepro/typo3-container-elements": "^3.0.0",
-		"buepro/typo3-pizpalue": "^12.0.0",
+		"buepro/typo3-pizpalue": "~12.2.0 || dev-BP-12.0",
 		"buepro/typo3-user-pizpalue": "^2.0.0",
 		"georgringer/news": "^9.1.0",
+		"georgringer/eventnews": "5.0.0",
 		"typo3/cms-base-distribution": "^11.5",
 		"typo3/cms-core": "^11.5",
 		"typo3/cms-indexed-search": "^11.5",

@@ -20,6 +20,7 @@ $EM_CONF[$_EXTKEY] = [
         'depends'   => [
             'container_elements'    => '3.0.0-3.99.99',
             'news'                  => '9.1.0-9.99.99',
+            'eventnews'             => '5.0.0',
             'pizpalue'              => '12.0.0-12.99.99',
             'typo3'                 => '11.5.0-11.5.99',
         ],

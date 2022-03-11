@@ -4,3 +4,4 @@ services:
       - name: event.listener
         identifier: 'buepro/pizpalue-distribution/finalize-extension-installation'
         event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
+  GeorgRinger\News\Controller\NewsController: '@GeorgRinger\Eventnews\Controller\NewsController'
