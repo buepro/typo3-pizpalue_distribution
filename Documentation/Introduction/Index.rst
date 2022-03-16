@@ -47,7 +47,7 @@ Screenshots
 ===========
 
 See as well `screenshots from pizpalue manual <https://docs.typo3.org/p/buepro/
-typo3-pizpalue/master/en-us/Introduction/Index.html#screenshots>`__
+typo3-pizpalue/main/en-us/Introduction/Index.html#screenshots>`__
 
 Landing page
 ------------
@@ -75,4 +75,4 @@ Credits
 =======
 
 See `section credits from pizpalue manual <https://docs.typo3.org/p/buepro/
-typo3-pizpalue/master/en-us/Introduction/Index.html#credits>`__
+typo3-pizpalue/main/en-us/Introduction/Index.html#credits>`__

@@ -28,7 +28,7 @@
 	"require": {
 		"buepro/typo3-container-elements": "^3.0.0",
 		"buepro/typo3-pizpalue": "~12.4.0 || dev-BP-12.0",
-		"buepro/typo3-user-pizpalue": "^2.1.0 || dev-master || dev-pizpalue",
+		"buepro/typo3-user-pizpalue": "^2.1.0 || dev-main || dev-pizpalue",
 		"friendsoftypo3/tt-address": "^6.0.1",
 		"georgringer/news": "^9.1.0",
 		"georgringer/eventnews": "5.0.0",
@@ -66,7 +66,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "3.2.x-dev"
+			"dev-main": "3.2.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",

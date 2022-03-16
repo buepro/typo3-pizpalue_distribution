@@ -36,7 +36,7 @@ Supported extensions
 
 The distribution supports the same extensions as the extension `pizpalue`. Head
 over to its `administration chapter <https://docs.typo3.org/p/buepro/typo3-
-pizpalue/master/en-us/Administration/Index.html#supported-extensions>`__
+pizpalue/main/en-us/Administration/Index.html#supported-extensions>`__
 to see the details.
 
 .. note::
