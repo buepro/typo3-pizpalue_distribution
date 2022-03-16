@@ -1,53 +1,34 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: Includes.txt
-
+.. include:: /Includes.rst.txt
 
 .. _start:
 
 ======================
-Distribution pizpalue
+Pizpalue distribution
 ======================
 
-.. only:: html
+:Extension key:
+   pizpalue
 
-   :Classification:
-      pizpalue_distribution
+:Version:
+   |release|
 
-   :Version:
-      |release|
+:Language:
+   en
 
-   :Language:
-      en
+:Author:
+   Roman Büchler
 
-   :Keywords:
-      pizpalue, distribution, bootstrap, bootstrap_package
+:Email:
+   rb@buechler.pro
 
-   :Copyright:
-      since 2020
+:License:
+   This document is published under the Open Content License
+   available from https://www.openhub.net/licenses/opl.
 
-   :Author:
-      Roman Büchler
+:Rendered:
+   |today|
 
-   :Email:
-      rb@buechler.pro
-
-   :License:
-      This document is published under the Open Content License
-      available from http://www.opencontent.org/opl.shtml
-
-   :Rendered:
-      |today|
-
-   The content of this document is related to TYPO3,
-   a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`__.
-
-
-
-   **Table of Contents**
+**Table of Contents**
 
 .. toctree::
    :maxdepth: 2
