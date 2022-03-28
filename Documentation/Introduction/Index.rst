@@ -29,6 +29,10 @@ The following extensions complement this distribution:
 -  `container_elements <https://extensions.typo3.org/extension/container_elements>`__,
    structure elements
 -  `news <https://extensions.typo3.org/extension/news>`__, news system
+- `eventnews <https://extensions.typo3.org/extension/eventnews>`__, news system
+- `tt_address <https://extensions.typo3.org/extension/tt_address>`__, address lists
+- `timelog <https://extensions.typo3.org/extension/timelog>`__, time and activity registration for projects
+
 
 Discover the functionality by browsing through the `demo site <https://www.
 pizpalue.buechler.pro/>`__.

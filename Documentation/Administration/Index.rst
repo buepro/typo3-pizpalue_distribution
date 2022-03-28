@@ -25,10 +25,11 @@ Extension                        Version
 ================================ ================
 container_elements               3.0.0-3.99.99
 eventnews                        5.0.0
-pizpalue                         12.0.0-12.99.99
 news                             9.1.0-9.99.99
-tt_address                       6.0.1
-user_pizpalue                    2.1.0
+pizpalue                         12.0.0-12.99.99
+timelog                          1.7.0-1.99.99
+tt_address                       6.0.1-6.99.99
+user_pizpalue                    2.1.2-2.99.99
 ================================ ================
 
 Supported extensions
