@@ -1,11 +1,13 @@
 # TYPO3 site package `user_pizpalue`
 
-[![Extension pizpalue](https://badgen.net/badge/TYPO3/pizpalue/orange)](https://extensions.typo3.org/extension/pizpalue/)
-[![Extension pizpalue_distribution](https://badgen.net/badge/TYPO3/pizpalue%20distribution/orange)](https://extensions.typo3.org/extension/pizpalue_distribution/)
+[![TYPO3 10](https://img.shields.io/badge/TYPO3-10-orange.svg)](https://get.typo3.org/version/10)
+[![TYPO3 11](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
+[![Extension pizpalue](https://img.shields.io/badge/Pizpalue-12-orange.svg)](https://extensions.typo3.org/extension/pizpalue/)
+[![Extension pizpalue_distribution](https://img.shields.io/badge/Pizpalue--Distribution-3-orange.svg)](https://extensions.typo3.org/extension/pizpalue_distribution/)
 
 ---
 
-This extension serves as a base to customize a TYPO3-website using the template
+This extension serves as a site package to customize a TYPO3-website using the template
 [pizpalue](https://github.com/buepro/typo3-pizpalue) in version 12.0.0 and higher.
 
 ## Composer

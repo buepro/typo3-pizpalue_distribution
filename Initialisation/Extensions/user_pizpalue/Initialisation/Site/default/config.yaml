@@ -49,7 +49,7 @@ errorHandling:
   -
     errorCode: '404'
     errorHandler: Page
-    errorContentSource: 't3://page?uid=7'
+    errorContentSource: 't3://page?uid=9'
 routes:
   -
     route: robots.txt
@@ -63,6 +63,7 @@ routeEnhancers:
   NewsPluginDetail:
     type: Extbase
     limitToPages:
+      - 37
       - 39
     extension: News
     plugin: Pi1
@@ -81,6 +82,7 @@ routeEnhancers:
   NewsPluginList:
     type: Extbase
     limitToPages:
+      - 36
       - 38
       - 40
     extension: News
