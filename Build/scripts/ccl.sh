@@ -8,7 +8,7 @@
 # Usage
 # -----
 #
-# 1. Change to project directory (typo3conf/ext/pizpalue)
+# 1. Change to project directory (typo3conf/ext/pizpalue_distribution)
 # 2. Run: ./Build/scripts/ccl.sh fromVersion targetVersion
 #
 # For escaping sequences see as well https://i.stack.imgur.com/NfH6K.png
