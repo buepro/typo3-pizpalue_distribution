@@ -6,6 +6,14 @@
    :alt: TYPO3 10
    :target: https://get.typo3.org/version/10
 
+.. image:: https://poser.pugx.org/buepro/typo3-pizpalue-distribution/d/total.svg
+   :alt: Total Downloads
+   :target: https://packagist.org/packages/buepro/typo3-pizpalue-distribution
+
+.. image:: https://poser.pugx.org/buepro/typo3-pizpalue-distribution/d/monthly
+   :alt: Monthly Downloads
+   :target: https://packagist.org/packages/buepro/typo3-pizpalue-distribution
+
 =========================================
 TYPO3 extension ``pizpalue_distribution``
 =========================================
@@ -15,12 +23,14 @@ TYPO3 extension ``pizpalue_distribution``
 This distribution extension installs a bootstrap based web site using the
 `template extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__.
 
-The web site features everything needed for private or corporate use. It is tailored to the Swiss market featuring
-German as default language and additional translations to French, English and Finnish.
+The web site features everything needed for private or corporate use. It is
+tailored to the Swiss market featuring German as default language and additional
+translations to French, English and Finnish.
 
-This distribution mainly provides the pages and content of the website and its configuration. The functionality is
-primarily provided by the `extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__, which provides
-new features and complements other extensions.
+This distribution mainly provides the pages and content of the website and its
+configuration. The functionality is primarily provided by the
+`extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__,
+which provides new features and complements other extensions.
 
 :Repository:  https://github.com/buepro/typo3-pizpalue_distribution
 :Read online: https://docs.typo3.org/p/buepro/typo3-pizpalue-distribution/main/en-us/
