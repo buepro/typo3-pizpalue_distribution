@@ -27,6 +27,7 @@
 	"homepage": "https://github.com/buepro/typo3-pizpalue_distribution",
 	"require": {
 		"buepro/typo3-container-elements": "^3.0.0",
+		"buepro/typo3-easyconf": "^1.0.1",
 		"buepro/typo3-pizpalue": "~12.5.0 || dev-BP-12.0",
 		"buepro/typo3-timelog": "^1.7.0",
 		"buepro/typo3-user-pizpalue": "^2.2.0 || dev-main || dev-customer || dev-pizpalue",

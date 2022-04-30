@@ -19,6 +19,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints'      => [
         'depends'   => [
             'container_elements'    => '3.0.0-3.99.99',
+            'easyconf'              => '1.0.1-1.99.99',
             'eventnews'             => '5.0.0',
             'news'                  => '9.1.0-9.99.99',
             'pizpalue'              => '12.5.0-12.5.99',

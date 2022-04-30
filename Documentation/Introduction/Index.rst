@@ -26,6 +26,7 @@ new features and complements other extensions.
 
 The following extensions complement this distribution:
 
+-  `easyconf <https://extensions.typo3.org/extension/easyconf>`__, website configuration for non technical audience
 -  `container_elements <https://extensions.typo3.org/extension/container_elements>`__,
    structure elements
 -  `news <https://extensions.typo3.org/extension/news>`__, news system
@@ -53,13 +54,20 @@ Screenshots
 See as well `screenshots from pizpalue manual <https://docs.typo3.org/p/buepro/
 typo3-pizpalue/main/en-us/Introduction/Index.html#screenshots>`__
 
+Website configuration
+---------------------
+
+.. figure:: ../Images/Introduction/Easyconf.jpg
+   :width: 700px
+   :alt: Website configuration
+
 Landing page
 ------------
 
 See as well `demo site <https://pizpalue.buechler.pro/>`__.
 
 .. figure:: ../Images/Introduction/LandingPage.jpg
-   :width: 500px
+   :width: 700px
    :alt: Landing page
 
 ----
@@ -70,7 +78,7 @@ Additions page
 See as well `demo site <https://pizpalue.buechler.pro/das-plus/>`__.
 
 .. figure:: ../Images/Introduction/AdditionsPage.jpg
-   :width: 500px
+   :width: 700px
    :alt: Additions page
 
 ----
