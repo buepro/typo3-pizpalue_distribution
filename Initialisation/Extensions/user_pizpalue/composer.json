@@ -21,7 +21,7 @@
 		}
 	],
 	"require": {
-		"buepro/typo3-pizpalue": ">=12.0.0 || dev-main || dev-BP-12.1",
+		"buepro/typo3-pizpalue": "^12.5.0 || dev-main || dev-BP-12.1",
 		"typo3/cms-core": ">=10.4.11"
 	},
 	"require-dev": {
@@ -51,7 +51,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "2.1.x-dev"
+			"dev-main": "2.2.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",

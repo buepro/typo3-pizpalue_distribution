@@ -1,9 +1,16 @@
 rootPageId: 1
 base: /
-baseVariants:
-  -
-    base: 'https://setup.url.ch'
-    condition: 'getenv("HTTP_HOST") == "setup.url.ch"'
+easyconf:
+  data:
+    admin:
+      siteConfiguration:
+        overwriteBase: '1'
+        overwriteBaseVariants: '1'
+        overwriteRobots: '1'
+        overwriteSitemap: '1'
+        manageNewsRouteEnhancer: '1'
+        removeLegacyNewsRouteEnhancers: '1'
+        overwritePageNotFound: '1'
 languages:
   -
     title: Deutsch
@@ -45,61 +52,3 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: gb
-errorHandling:
-  -
-    errorCode: '404'
-    errorHandler: Page
-    errorContentSource: 't3://page?uid=9'
-routes:
-  -
-    route: robots.txt
-    type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\nSitemap: https://www.domain.ch/sitemap.xml\r\n"
-  -
-    route: sitemap.xml
-    type: uri
-    source: 'https://www.domain.ch/?type=1533906435'
-routeEnhancers:
-  NewsPluginDetail:
-    type: Extbase
-    limitToPages:
-      - 37
-      - 39
-    extension: News
-    plugin: Pi1
-    routes:
-      -
-        routePath: '/{news_title}'
-        _controller: 'News::detail'
-        _arguments:
-          news_title: news
-    defaultController: 'News::detail'
-    aspects:
-      news_title:
-        type: PersistedAliasMapper
-        tableName: tx_news_domain_model_news
-        routeFieldName: path_segment
-  NewsPluginList:
-    type: Extbase
-    limitToPages:
-      - 36
-      - 38
-      - 40
-    extension: News
-    plugin: Pi1
-    routes:
-      -
-        routePath: '/{page}'
-        _controller: 'News::list'
-        _arguments:
-          page: '@widget_0/currentPage'
-    defaultController: 'News::list'
-    defaults:
-      page: '0'
-    requirements:
-      page: \d+
-    aspects:
-      page:
-        type: StaticRangeMapper
-        start: '1'
-        end: '100'

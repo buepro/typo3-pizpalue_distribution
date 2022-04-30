@@ -22,9 +22,11 @@ pizpalue.general {
 }
 
 pizpalue.agency {
-    name = Agentur
-#    slogan = Slogan
-#    link = https://www.terve.link
+    name = buechler.pro
+    slogan = und s'lauft
+    phone = +41 44 515 98 55
+    email = info@buechler.pro
+    link = https://www.buechler.pro
 #    reference = <span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
 #    siteMode = 0
 #    isMaintenancePage = 0
@@ -153,7 +155,6 @@ plugin.bootstrap_package.settings.scss {
 #    pp-header-toggler-line-gap = round($pp-header-toggler-width / 5.67)
 #    pp-header-toggler-line-width = $pp-header-toggler-width - 2 * $pp-header-toggler-padding
 #    pp-header-toggler-line-height = round($pp-header-toggler-line-width / 11)
-#    pp-header-toggler-margin-right = -$pp-header-toggler-padding
 }
 
 
