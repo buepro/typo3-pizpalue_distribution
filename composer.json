@@ -32,7 +32,7 @@
 		"buepro/typo3-timelog": "^1.7.0",
 		"buepro/typo3-user-pizpalue": "^2.2.0 || dev-main || dev-customer || dev-pizpalue",
 		"friendsoftypo3/tt-address": "^6.0.1",
-		"georgringer/news": "^9.1.0",
+		"georgringer/news": "^9.4.0",
 		"georgringer/eventnews": "5.0.0",
 		"typo3/cms-base-distribution": "^11.5",
 		"typo3/cms-core": "^11.5",
