@@ -28,9 +28,9 @@
 	"require": {
 		"buepro/typo3-container-elements": "^3.0.0",
 		"buepro/typo3-easyconf": "^1.0.1",
-		"buepro/typo3-pizpalue": "~12.5.0",
+		"buepro/typo3-pizpalue": "~12.5.0 || dev-main",
 		"buepro/typo3-timelog": "^1.7.0",
-		"buepro/typo3-user-pizpalue": "^2.2.0",
+		"buepro/typo3-user-pizpalue": "^2.2.0 || dev-main || dev-pizpalue",
 		"friendsoftypo3/tt-address": "^6.0.1",
 		"georgringer/news": "^9.4.0",
 		"georgringer/eventnews": "5.0.0",
