@@ -34,6 +34,7 @@
 		"friendsoftypo3/tt-address": "^6.0.1",
 		"georgringer/news": "^9.4.0",
 		"georgringer/eventnews": "5.0.0",
+		"php": ">=7.4.0",
 		"typo3/cms-base-distribution": "^11.5",
 		"typo3/cms-core": "^11.5",
 		"typo3/cms-indexed-search": "^11.5",
