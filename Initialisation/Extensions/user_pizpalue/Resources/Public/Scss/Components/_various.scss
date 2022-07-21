@@ -20,6 +20,23 @@ ul.list-normal {
 }
 
 //
+// Maximal background image width
+// The same value has to be set in TS setup `lib.contentElement.settings.responsiveimages.pageVariants.default.width`
+//
+$up-max-image-width: 2000px !default;
+@media (min-width: $up-max-image-width) {
+    .carousel .carousel-backgroundimage-container, .frame-backgroundimage-container {
+        max-width: $up-max-image-width;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .pp-content > *:not(.frame-backgroundimage-container) {
+        max-width: $up-max-image-width;
+        margin: 0 auto;
+    }
+}
+
+//
 // Content elements
 //
 .pp-card-primary, .pp-card-secondary, .pp-card-complementary {

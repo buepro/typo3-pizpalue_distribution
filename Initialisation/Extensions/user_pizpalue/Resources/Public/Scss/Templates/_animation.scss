@@ -1,0 +1,44 @@
+//
+// NOTE:
+// When using animate.style keyframes the animate.style css needs to be embedded manually by adding
+// `animate__animated` to the content element `Additional classes`.
+//
+
+@keyframes upCarouselBackground {
+    from {
+        background: rgba(darken($primary, 20%), 0);
+    }
+    to {
+        background: rgba(darken($primary, 20%), 0.8);
+    }
+}
+
+.pp-type-carousel.upc-animate {
+    .carousel-text-inner {
+        & , & > * {
+            opacity: 0;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        & {
+            opacity: 1;
+            padding: var(--frame-spacing);
+            animation-delay: 4s;
+            animation-name: upCarouselBackground;
+        }
+    }
+    .carousel-item-header {
+        animation-delay: 1s;
+        animation-name: fadeInDown;
+    }
+    .carousel-item-subheader {
+        animation-delay: 2s;
+        animation-name: fadeInUp;
+    }
+    .carousel-item-bodytext {
+        animation-delay: 3s;
+        animation-name: fadeInUp;
+    }
+}
+

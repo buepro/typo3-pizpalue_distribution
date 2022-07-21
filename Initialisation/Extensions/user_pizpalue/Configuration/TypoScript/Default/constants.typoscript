@@ -181,6 +181,9 @@ page {
 # Font
 #=========================================================#
 
+# Define loaded google fonts manually
+#pizpalue.style.googleFontsUrl = https://fonts.googleapis.com/css?display=swap&family=Source+Sans+Pro:300,400,700|Dancing+Script:400
+
 page.theme.googleFont {
 #    enable = 1
 #    font = Source Sans Pro

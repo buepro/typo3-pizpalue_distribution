@@ -10,7 +10,7 @@
 ---
 
 This extension serves as a site package to customize a TYPO3-website using the template
-[pizpalue](https://github.com/buepro/typo3-pizpalue) in version 12.0.0 and higher.
+[pizpalue](https://github.com/buepro/typo3-pizpalue) in version 13.0.0 and higher.
 
 ## Composer
 

@@ -1,37 +1,4 @@
 //
-// Toggler
-//
-.navbar-mainnavigation .navbar-toggler {
-    height: 40px;
-    width: 30px;
-}
-
-.navbar-toggler-icon {
-    &, &:before, &:after {
-        width: 30px;
-        border-radius: 2px;
-    }
-
-    &:before, &:after {
-        height: 4px;
-    }
-}
-
-.navbar-toggler.collapsed {
-    .navbar-toggler-icon {
-        height: 4px;
-    }
-
-    .navbar-toggler-icon:before {
-        top: -12px;
-    }
-
-    .navbar-toggler-icon:after {
-        top: 12px;
-    }
-}
-
-//
 // Toggle menu
 //
 #mainnavigation {
