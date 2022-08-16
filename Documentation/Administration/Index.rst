@@ -23,7 +23,7 @@ The following extensions will be installed with the distribution:
 ================================ ================
 Extension                        Version
 ================================ ================
-container_elements               3.0.0-3.99.99
+container_elements               4.0.0-4.99.99
 eventnews                        5.0.0
 news                             9.1.0-9.99.99
 pizpalue                         13.0.0-13.99.99
