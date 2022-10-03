@@ -28,12 +28,12 @@
 	"require": {
 		"buepro/typo3-container-elements": "^4.0.0",
 		"buepro/typo3-easyconf": "^1.0.1",
-		"buepro/typo3-pizpalue": "^13.0.0 || dev-main",
+		"buepro/typo3-pizpalue": "^14.0.0",
 		"buepro/typo3-timelog": "^1.7.0",
-		"buepro/typo3-user-pizpalue": "~3.0.0 || dev-main || dev-pizpalue || dev-demo",
+		"buepro/typo3-user-pizpalue": "~4.0.0 || dev-main || dev-pizpalue || dev-demo || dev-customer",
 		"friendsoftypo3/tt-address": "^6.0.1",
 		"georgringer/news": "^9.4.0",
-		"georgringer/eventnews": "5.0.0",
+		"georgringer/eventnews": "^5.0.0",
 		"php": ">=7.4.0",
 		"typo3/cms-base-distribution": "^11.5",
 		"typo3/cms-core": "^11.5",
@@ -69,7 +69,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "4.1.x-dev"
+			"dev-main": "5.0.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
