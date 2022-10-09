@@ -1,3 +1,12 @@
+TCEFORM.tt_content.frame_class {
+    addItems {
+        up1 = LLL:EXT:user_pizpalue/Resources/Private/Language/locallang_db.xlf:tt_content.frame_class.upCeFrame1
+        up2 = LLL:EXT:user_pizpalue/Resources/Private/Language/locallang_db.xlf:tt_content.frame_class.upCeFrame2
+        up3 = LLL:EXT:user_pizpalue/Resources/Private/Language/locallang_db.xlf:tt_content.frame_class.upCeFrame3
+        up4 = LLL:EXT:user_pizpalue/Resources/Private/Language/locallang_db.xlf:tt_content.frame_class.upCeFrame4
+    }
+}
+
 #TCEFORM.tx_bootstrappackage_carousel_item.layout {
 #    addItems {
 #        up-impressions = Impressionen

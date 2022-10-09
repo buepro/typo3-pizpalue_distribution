@@ -21,7 +21,7 @@
 		}
 	],
 	"require": {
-		"buepro/typo3-pizpalue": "^13.0.0 || dev-main",
+		"buepro/typo3-pizpalue": ">=14.0.0 || dev-main",
 		"typo3/cms-core": ">=10.4.11"
 	},
 	"require-dev": {
@@ -47,11 +47,16 @@
 		"bin-dir": ".build/bin",
 		"optimize-autoloader": true,
 		"sort-packages": true,
-		"vendor-dir": ".build/vendor"
+		"vendor-dir": ".build/vendor",
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true,
+			"ergebnis/composer-normalize": true
+		}
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "3.0.x-dev"
+			"dev-main": "4.0.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",

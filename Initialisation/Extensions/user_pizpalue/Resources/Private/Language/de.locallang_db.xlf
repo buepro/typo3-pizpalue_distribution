@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-09-05T09:11:39Z" product-name="user_pizpalue" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.frame_class.upCeFrame1">
+				<source>Custom frame 1</source>
+				<target>Angepasster Rahmen 1</target>
+			</trans-unit>
+			<trans-unit id="tt_content.frame_class.upCeFrame2">
+				<source>Custom frame 2</source>
+				<target>Angepasster Rahmen 2</target>
+			</trans-unit>
+			<trans-unit id="tt_content.frame_class.upCeFrame3">
+				<source>Custom frame 3</source>
+				<target>Angepasster Rahmen 3</target>
+			</trans-unit>
+			<trans-unit id="tt_content.frame_class.upCeFrame4">
+				<source>Custom frame 4</source>
+				<target>Angepasster Rahmen 4</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

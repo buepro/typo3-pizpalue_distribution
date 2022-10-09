@@ -1,0 +1,21 @@
+//
+// Custom frames
+// --------------------------------------------------
+.frame-up1,
+.frame-up2,
+.frame-up3 {
+    .frame-inner {
+        border: $border-width solid;
+        @include border-radius($border-radius);
+        padding: calc(var(--pp-frame-spacing) / 2);
+    }
+}
+.frame-up1 .frame-inner {
+    @include up-make-frame-bg($primary);
+}
+.frame-up2 .frame-inner {
+    @include up-make-frame-bg($secondary);
+}
+.frame-up3 .frame-inner {
+    @include up-make-frame-bg($complementary);
+}

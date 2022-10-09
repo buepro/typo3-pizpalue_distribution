@@ -1,28 +1,7 @@
 //
-// General
-//
-h1, h2, h3, h4, h5, h6 {
-    word-break: normal;
-    overflow-wrap: anywhere;
-}
-
-@include media-breakpoint-up(lg) {
-    html {
-        font-size: 1.125 * $font-size-base;
-    }
-}
-
-ul.list-normal {
-    padding-left: 1.5rem;
-    li {
-        margin-bottom: 0.5rem;
-    }
-}
-
-//
 // Maximal background image width
 // The same value has to be set in TS setup `lib.contentElement.settings.responsiveimages.pageVariants.default.width`
-//
+// --------------------------------------------------
 $up-max-image-width: 2000px !default;
 @media (min-width: $up-max-image-width) {
     .carousel .carousel-backgroundimage-container, .frame-backgroundimage-container {
@@ -38,7 +17,7 @@ $up-max-image-width: 2000px !default;
 
 //
 // Content elements
-//
+// --------------------------------------------------
 .pp-card-primary, .pp-card-secondary, .pp-card-complementary {
     .card {
         border: none;
@@ -57,7 +36,7 @@ $up-max-image-width: 2000px !default;
 
 //
 // Forms
-//
+// --------------------------------------------------
 .frame-type-form_formframework {
     fieldset {
         border: mix(white, $primary, 80%) 1px solid;
@@ -71,9 +50,61 @@ $up-max-image-width: 2000px !default;
 }
 
 //
-// Bootstrap package
+// Scrolling
+// --------------------------------------------------
+.scroll-top {
+    background: rgba(black, 70%);
+    border: rgba(white, 70%) 1px solid;
+    right: 10px;
+    bottom: 10px;
+    width: 2.5em;
+    height: 2.5em;
+    @if $enable-rounded {
+        border-radius: $border-radius;
+    }
+}
+
 //
-.navbar-brand-text {
-    display: flex;
-    align-items: center;
+// Social links
+// NOTE: The bootstrap package uses the class footer-sociallinks for further styling
+// --------------------------------------------------
+:root {
+    --up-sociallinks-size: 1.25rem;
+}
+.sociallinks-link-icon {
+    font-size: var(--up-sociallinks-size);
+    width: var(--up-sociallinks-size);
+    height: var(--up-sociallinks-size);
+}
+
+//
+// Icons
+// --------------------------------------------------
+.ppicon, .glyphicon {
+    &:before {
+        transform: translateY(0.16em);
+    }
+}
+
+//
+// Language menu
+// --------------------------------------------------
+#language_menu {
+    &.ppc-icon, &.ppc-icontext {
+        line-height: 1.5em;
+    }
+    &.ppc-icon li {
+        padding-left: 0.15em !important;
+        padding-right: 0.15em !important;
+    }
+    &.ppc-icontext img {
+        margin-right: 0.3em;
+    }
+    img {
+        width: auto;
+        height: 1.5em;
+    }
+    .text-muted img {
+        filter: grayscale(1);
+    }
 }

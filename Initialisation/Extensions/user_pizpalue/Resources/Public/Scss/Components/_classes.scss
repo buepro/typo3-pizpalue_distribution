@@ -1,9 +1,46 @@
 //
 // Classes defined within user_pizpalue
 // They might be prefixed with `up-` or `upc-` (@see README.md)
-//
-
+// --------------------------------------------------
 .up-nav-subpages {
     margin-left: -$nav-link-padding-x;
     margin-right: -$nav-link-padding-x;
+}
+
+//
+// Pizpalue classes
+// --------------------------------------------------
+@keyframes flashonce-mark-primary {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 10px $body-bg, 0 0 10px 10px $primary;
+    }
+    100% {
+        box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg, $primary);
+    }
+}
+.pp-marked-target:target {
+    animation: flashonce-mark-primary 1s ease-in-out 1;
+    box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg, $primary);
+}
+
+
+//
+// Pseudo classes
+// --------------------------------------------------
+@keyframes flashonce-primary {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px $primary;
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+*:target {
+    animation: flashonce-primary 1s ease-in-out 1;
 }

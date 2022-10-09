@@ -1,13 +1,3 @@
 //
 // Define variables that use variables defined by bootstrap, bootstrap_package or pizpalue.
-//
-$up-frame-outer-spacing: 1rem !default;
-$up-frame-outer-spacing-scaling: () !default;
-$up-frame-outer-spacing-scaling: map-merge((
-    xs: map-get($frame-outer-spacing-scaling, xsmall),
-    sm: map-get($frame-outer-spacing-scaling, small),
-    md: map-get($frame-outer-spacing-scaling, medium),
-    lg: map-get($frame-outer-spacing-scaling, large),
-    xl: map-get($frame-outer-spacing-scaling, xlarge),
-    xxl: map-get($frame-outer-spacing-scaling, xxlarge)
-), $up-frame-outer-spacing-scaling);
+// --------------------------------------------------

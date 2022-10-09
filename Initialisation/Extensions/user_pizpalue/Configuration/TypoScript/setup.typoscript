@@ -1,15 +1,76 @@
 #=========================================================#
-# Customizations
-# --------------
-# To ease rebasing this file won't be touched by the
-# master branch.
+# Frequently used settings can be found in the Default
+# folder.
 #=========================================================#
 
+
 #=========================================================#
-# Defaults
-# --------
-# To get started you might copy the default settings to
-# this file and remove the below listed include tag.
+# Lib objects
 #=========================================================#
 
-@import 'EXT:user_pizpalue/Configuration/TypoScript/Default/setup.typoscript'
+lib.contentElement {
+    layoutRootPaths {
+        30 = {$user_pizpalue.contentElement.fluidtemplate.layoutRootPath}
+    }
+
+    templateRootPaths {
+        30 = {$user_pizpalue.contentElement.fluidtemplate.templateRootPath}
+    }
+
+    partialRootPaths {
+        30 = {$user_pizpalue.contentElement.fluidtemplate.partialRootPath}
+    }
+}
+
+
+#=========================================================#
+# Config
+#=========================================================#
+
+config {
+    cache_clearAtMidnight = 1
+}
+
+
+#=========================================================#
+# Page object
+#=========================================================#
+
+page {
+    #---------------------------------------------------------#
+    # CSS/Scss
+    #---------------------------------------------------------#
+    includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/theme.scss
+
+    #---------------------------------------------------------#
+    # Template
+    #---------------------------------------------------------#
+    10 {
+        layoutRootPaths.3 = {$user_pizpalue.page.fluidtemplate.layoutRootPath}
+        templateRootPaths.3 = {$user_pizpalue.page.fluidtemplate.templateRootPath}
+        partialRootPaths.3 = {$user_pizpalue.page.fluidtemplate.partialRootPath}
+    }
+}
+
+
+#=========================================================#
+# Various
+#=========================================================#
+
+# Increase level in subnavigation (side)
+page.10.dataProcessing.20.levels = 3
+
+
+#=========================================================#
+# Development settings
+#=========================================================#
+
+[{$pizpalue.agency.siteMode} == 1 || {$pizpalue.agency.siteMode} == 2]
+    @import 'EXT:user_pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
+[END]
+
+# Limit seo if not on customer domain (e.g. when using temporary domain for site creation)
+[traverse(page, "uid") > 0 && site("base").getHost() != "{$pizpalue.customer.domain}" && site("base").getHost() != "www.{$pizpalue.customer.domain}"]
+    page.meta.robots = noindex,nofollow
+    @import 'EXT:pizpalue/Configuration/TypoScript/Develop/Indicator.typoscript'
+[END]

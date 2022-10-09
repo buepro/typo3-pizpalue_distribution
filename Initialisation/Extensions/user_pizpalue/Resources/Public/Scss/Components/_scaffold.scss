@@ -1,0 +1,14 @@
+//
+// Limit body width
+//
+body, #page-header {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background: darken($body-bg, 10%);
+}
+.body-bg {
+    background: $body-bg;
+}

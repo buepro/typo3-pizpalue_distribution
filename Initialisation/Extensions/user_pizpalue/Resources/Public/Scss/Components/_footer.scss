@@ -21,3 +21,17 @@
         margin-top: calc(0.5 * var(--pp-frame-spacing));
     }
 }
+
+//
+// Bootstrap package social links footer class
+// --------------------------------------------------
+.footer-sociallinks {
+    --up-sociallinks-size: 1.5rem;
+    .sociallinks-list {
+        gap: 0.5rem;
+    }
+    .sociallinks-link {
+        width: var(--pp-sociallinks-outersize, calc(1.5 * var(--up-sociallinks-size)));
+        height: var(--pp-sociallinks-outersize, calc(1.5 * var(--up-sociallinks-size)));
+    }
+}

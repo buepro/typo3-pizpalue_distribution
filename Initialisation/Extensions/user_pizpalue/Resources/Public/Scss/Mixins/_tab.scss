@@ -1,0 +1,8 @@
+@mixin up-style-tab-light($color) {
+    .nav-link {
+        &.active {
+            box-shadow: inset 0 (0.4 * $nav-link-padding-y) 0 0 $color;
+        }
+    }
+}
+

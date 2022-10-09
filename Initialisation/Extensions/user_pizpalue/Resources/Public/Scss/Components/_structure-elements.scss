@@ -1,0 +1,34 @@
+//
+// Accordion
+// --------------------------------------------------
+.pp-accordion-primary, .fe-accordion-primary, .ce-accordion-primary {
+    @include up-style-accordion-light($primary);
+}
+.pp-accordion-secondary, .fe-accordion-secondary, .ce-accordion-secondary {
+    @include up-style-accordion-light($secondary);
+}
+.pp-accordion-complementary, .fe-accordion-complementary, .ce-accordion-complementary {
+    @include up-style-accordion-light($complementary);
+}
+
+//
+// Tabs
+// --------------------------------------------------
+.pp-tabs-primary, .fe-tabs-primary, .ce-tabs-primary {
+    @include up-style-tab-light($primary);
+}
+.pp-tabs-secondary, .fe-tabs-secondary, .ce-tabs-secondary {
+    @include up-style-tab-light($secondary);
+}
+.pp-tabs-complementary, .fe-tabs-complementary, .ce-tabs-complementary {
+    @include up-style-tab-light($complementary);
+}
+
+//
+// Grid
+//
+.frame-type-ce_grid, .pp-frameless-content.pp-type-ce_grid {
+    .row {
+        --bs-gutter-y: var(--bs-gutter-x);
+    }
+}

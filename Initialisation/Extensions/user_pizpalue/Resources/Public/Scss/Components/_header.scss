@@ -1,3 +1,8 @@
+.navbar-brand-text {
+    display: flex;
+    align-items: center;
+}
+
 //.navbar-mainnavigation .navbar-brand-image {
 //    padding-top: 10px;
 //    padding-bottom: 10px;
@@ -8,12 +13,3 @@
 //        }
 //    }
 //}
-
-@media (min-width: $pp-header-overlay-breakpoint) {
-    .navbar-mainnavigation.navbar-default-transition:not(.navbar-transition),
-    .navbar-mainnavigation.navbar-inverse-transition:not(.navbar-transition) {
-        .navbar-nav > li > .nav-link::before {
-            background: white;
-        }
-    }
-}

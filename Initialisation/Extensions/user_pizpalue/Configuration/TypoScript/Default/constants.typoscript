@@ -6,8 +6,6 @@ plugin.bootstrap_package.settings.scss {
     # Enable presetting scss variables. Is as well used to generate the main theme from pizpalue.
     # See `EXT:pizpalue/Resources/Public/Scss/theme-main.scss`
 #    pp-enable-user-presets = false
-    # Set to `composer-root` if user_pizpalue is used as a root package (e.g. for development)
-#    up-install-dir = composer-root
 }
 
 
@@ -40,6 +38,8 @@ pizpalue.agency {
 pizpalue.customer {
     company = Company GmbH
     domain = domain.ch
+    legalContact = Legal contact
+    uid = CHE-xxx.xxx.xxx
     contactName = Allgemeiner Kundenname
     contactPhone = 111 111 11 11
     contactPhoneAlt = 111 111 11 12
@@ -106,9 +106,12 @@ plugin.bootstrap_package.settings.scss {
     #:::::::::::::::::::::::
     #: Adjust main menu navbar
     #.
-#    navbar-height = 100px
-#    navbar-height-sm = 0.7 * $navbar-height
-#    navbar-height-lg = 1.3 * $navbar-height
+#    pp-navbar-height-md = 100px
+#    pp-navbar-height-lg = 1.3 * $pp-navbar-height-md
+#    pp-navbar-height-xl = 1.3 * $pp-navbar-height-md
+#    pp-navbar-height-xxl = 1.3 * $pp-navbar-height-md
+#    navbar-heights = (xs: $pp-navbar-height-xs, sm: $pp-navbar-height-sm, md: $pp-navbar-height-md, lg: $pp-navbar-height-lg, xl: $pp-navbar-height-xl, xxl: $pp-navbar-height-xxl)
+
 }
 
 pizpalue.scaffold {
@@ -252,6 +255,7 @@ plugin.bootstrap_package.settings.scss {
 #    footer-meta-link-hover-decoration = none
 #    headings-color = null
 #    input-placeholder-color = $gray-600
+#    pp-frame-background-secondary = ('background': #dddddd, 'color': #111111, 'headings-color': #222222, 'link-color': #333333, 'link-hover-color': #444444, 'link-decoration': 'none', 'link-decoration-style': 'inherit', 'link-weight': null)
 }
 
 

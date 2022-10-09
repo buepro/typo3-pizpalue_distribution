@@ -1,0 +1,17 @@
+@mixin up-style-accordion-light($color) {
+    .accordion-button {
+        border-left: $color 4px solid;
+        &.collapsed {
+            border-left-color: transparent;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .accordion-collapse {
+        border-left: mix(white, $color, 30%) 4px dotted;
+        &.show {
+            border-left-style: solid;
+        }
+    }
+}

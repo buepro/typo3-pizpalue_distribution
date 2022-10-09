@@ -1,0 +1,8 @@
+.typo3-messages {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: var(--pp-frame-spacing);
+    li > *:last-child {
+        margin-bottom: 0;
+    }
+}

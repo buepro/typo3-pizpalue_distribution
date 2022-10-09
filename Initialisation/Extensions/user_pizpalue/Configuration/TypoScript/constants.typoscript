@@ -1,15 +1,96 @@
 #=========================================================#
-# Customizations
-# --------------
-# To ease rebasing this file won't be touched by the
-# master branch.
+# Frequently used settings can be found in the Default
+# folder.
 #=========================================================#
 
+
 #=========================================================#
-# Defaults
-# --------
-# To get started you might copy the default settings to
-# this file and remove the below listed include tag.
+# Templates
 #=========================================================#
 
-@import 'EXT:user_pizpalue/Configuration/TypoScript/Default/constants.typoscript'
+user_pizpalue {
+    page.fluidtemplate {
+        templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/Page/
+    }
+    contentElement.fluidtemplate {
+        templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+#=========================================================#
+# Scaffold
+#=========================================================#
+
+pizpalue.scaffold {
+    footer {
+        rowClass = row
+        leftColumnClass = col-sm-6 col-lg-4 order-1 ppc-left
+        middleColumnClass = col-sm-12 col-lg-4 order-3 order-lg-2 ppc-middle
+        rightColumnClass = col-sm-6 col-lg-4 order-2 order-lg-3 ppc-right
+    }
+}
+
+plugin.bootstrap_package.settings.scss {
+    frame-inner-spacing = 2.5rem
+    frame-inner-spacing-small = 1.25rem
+}
+
+
+#=========================================================#
+# Header
+#=========================================================#
+
+page {
+    theme {
+        navigation {
+            style = default
+            type =
+        }
+    }
+}
+
+[tree.level == 0]
+    page {
+        theme {
+            navigation {
+                style = default-transition
+                type = top
+            }
+        }
+    }
+[end]
+
+plugin.bootstrap_package.settings.scss {
+    pp-header-overlay-breakpoint = 0px
+}
+
+
+#=========================================================#
+# Menu
+#=========================================================#
+
+page {
+    theme {
+        meta.enable = 0
+        language.enable = 1
+    }
+}
+
+
+#=========================================================#
+# Colors
+#=========================================================#
+
+plugin.bootstrap_package.settings.scss {
+    subnav-active-bg = $subnav-hover-bg
+}
+
+
+#=========================================================#
+# SEO
+#=========================================================#
+
+pizpalue.seo {
+    optimizeLinkTargets = 1
+}
