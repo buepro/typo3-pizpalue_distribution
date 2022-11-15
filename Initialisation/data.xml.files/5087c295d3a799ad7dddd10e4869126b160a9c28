@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="109.27mm" height="72.173mm" version="1.1" viewBox="0 0 387.17 255.73">
+  <g transform="matrix(2.5408 0 0 4.2351 -354 -2927.8)" fill-rule="evenodd">
+    <g transform="matrix(1.3886 0 0 1.496 -115.13 35.753)">
+      <rect x="183.37" y="438.23" width="41.357" height="40.324" fill="#e3f2fd"></rect>
+      <path d="m216.46 449.77-16.92 11.761-7.8954-6.7207-8.2716 7.8758v15.872h41.358v-20.981l-8.2716-7.8076z" fill="#64b5f6"></path>
+    </g>
+    <g fill="#03a9f4">
+      <rect x="205.54" y="691.5" width="86.071" height="6.4286" ry="1.5179"></rect>
+      <rect x="205.54" y="701.32" width="86.071" height="6.4286" ry="1.5179"></rect>
+      <rect x="205.54" y="710.79" width="86.071" height="6.4286" ry="1.5179"></rect>
+      <rect x="205.54" y="720.1" width="37.837" height="6.4286" ry="1.5179"></rect>
+      <rect x="205.54" y="732.73" width="86.071" height="6.4286" ry="1.5179"></rect>
+      <rect x="205.54" y="741.45" width="37.837" height="6.4286" ry="1.5179"></rect>
+    </g>
+  </g>
+</svg>
