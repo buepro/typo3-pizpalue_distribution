@@ -35,6 +35,5 @@ Pizpalue distribution
 
    Introduction/Index
    Administration/Index
-   Configuration/Index
    FAQ/Index
    Changelog/Index
