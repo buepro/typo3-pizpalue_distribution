@@ -1,5 +1,5 @@
 #=========================================================#
-# Frequently used settings can be found in the Default
+# Frequently used settings can be found in the Sample
 # folder.
 #=========================================================#
 
@@ -8,12 +8,17 @@
 # Templates
 #=========================================================#
 
-user_pizpalue {
-    page.fluidtemplate {
+page {
+    fluidtemplate {
         templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/Page/
     }
-    contentElement.fluidtemplate {
-        templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/ContentElements/
+}
+
+plugin {
+    bootstrap_package_contentelements {
+        view {
+            templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/ContentElements/
+        }
     }
 }
 
@@ -84,6 +89,16 @@ page {
 
 plugin.bootstrap_package.settings.scss {
     subnav-active-bg = $subnav-hover-bg
+}
+
+
+#=========================================================#
+# Various SCSS
+#=========================================================#
+
+plugin.bootstrap_package.settings.scss {
+    headings-margin-bottom = 1rem
+    lead-font-size = 1.4rem
 }
 
 

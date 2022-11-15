@@ -12,7 +12,7 @@ Configuration
 Install tool
 ============
 
-Consider to review the below mentioned entries in the installtool.
+Consider to review the below mentioned entries in the install tool.
 
 .. code-block:: php
 

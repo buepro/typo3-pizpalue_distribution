@@ -54,7 +54,7 @@ class ExtensionInstallService
     private function copyAdditionalConfiguration($force = false): bool
     {
         $source = Environment::getPublicPath()
-            . '/typo3conf/ext/user_pizpalue/Resources/Private/ComposerRoot/public/typo3conf/AdditionalConfiguration.php';
+            . '/typo3conf/ext/user_pizpalue/Resources/Private/FolderStructureTemplateFiles/AdditionalConfiguration.php';
         $destination = Environment::getPublicPath() . '/typo3conf/AdditionalConfiguration.php';
         $backup = sprintf(
             '%s_%d.backup',

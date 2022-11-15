@@ -1,8 +1,7 @@
 # TYPO3 site package `user_pizpalue`
 
-[![TYPO3 10](https://img.shields.io/badge/TYPO3-10-orange.svg)](https://get.typo3.org/version/10)
 [![TYPO3 11](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
-[![Extension pizpalue](https://img.shields.io/badge/Pizpalue-12-orange.svg)](https://extensions.typo3.org/extension/pizpalue/)
+[![Extension pizpalue](https://img.shields.io/badge/Pizpalue-14-orange.svg)](https://extensions.typo3.org/extension/pizpalue/)
 [![Extension pizpalue_distribution](https://img.shields.io/badge/Pizpalue--Distribution-3-orange.svg)](https://extensions.typo3.org/extension/pizpalue_distribution/)
 [![Total Downloads](https://poser.pugx.org/buepro/typo3-user-pizpalue/d/total.svg)](https://packagist.org/packages/buepro/typo3-user-pizpalue)
 [![Monthly Downloads](https://poser.pugx.org/buepro/typo3-user-pizpalue/d/monthly)](https://packagist.org/packages/buepro/typo3-user-pizpalue)
@@ -12,47 +11,68 @@
 This extension serves as a site package to customize a TYPO3-website using the template
 [pizpalue](https://github.com/buepro/typo3-pizpalue) in version 14.0.0 and higher.
 
-## Composer
+## Installation
 
-To use the extension in a composer environment different approaches are available. Following two ways are further
-outlined:
+The following steps set up a TYPO3 website using this package as a composer root package.
 
-### Without version control
-
-1. Don't add `buepro/typor-user-pizpalue` as a requirement to the composer configuration
-1. Copy the extension manually to the extension directory (`typo3conf/ext/user_pizpalue`)
-1. Add the following autoload declaration to the composer configuration from the web site:
+1. **Get source code**
    ```
-   "autoload": {
-        "psr-4": {
-            "Buepro\\UserPizpalue\\": "public/typo3conf/ext/user_pizpalue/Classes/"
-        }
-    }
+   composer create-project buepro/typo3-user-pizpalue && cd typo3-user-pizpalue && composer u
    ```
-1. Run `composer dumpautoload` to generate the autoload info
 
-### With version control
-
-1. Add your repository to the composer configuration from the web site:
+2. **Setup TYPO3**
    ```
-   "repositories": [
-       {
-            "type": "vcs",
-            "url": "https://user@domain.ch/path_to_git/typo3-user-pizpalue.git"
+   .build/bin/typo3cms install:setup \
+   --no-interaction \
+   --use-existing-database \
+   --database-host-name=127.0.0.1 \
+   --database-port=3306 \
+   --database-name=db \
+   --database-user-name=db \
+   --database-user-password=db \
+   --admin-user-name=admin \
+   --admin-password=password \
+   --site-name="Pizpalue site" \
+   --web-server-config=apache \
+   --skip-extension-setup
+   ```
+   > Extension setup is skipped due to a bug in the package `helhum/typo3-console`.
+
+3. **Setup extensions**
+   ```
+   .build/bin/typo3 extension:setup
+   ```
+
+4. **Review `composer.json`**
+
+    1. Define packages
+
+       Remove the dependency to `"buepro/typo3-pizpalue-distribution"` and all packages not required by the
+       site.
+       > NOTE: Just use the needed packages. In many projects just `buepro/typo3-pizpalue` and
+       `buepro/typo3-container-elements` are required.
+
+   2. **Check PHP configuration**
+
+       Make sure the PHP version used in the shell and for cron jobs corresponds to the PHP version used for running the
+       website. In case they  differ you might need to add a platform configuration to `composer.json`. A possible
+       platform configuration could look as following:
+       ```
+       "config": {
+         "platform": {
+           "php": "8.1.9"
+         }
        }
-   ],
+       ```
+
+5. **Finalize installation**
    ```
-1. Update the require section from the composer configuration from the web site:
+   composer finalize-installation
    ```
-   "require": {
-       "buepro/typo3-user-pizpalue": "dev-mybranch",
-   }
-   ```
-1. Run `composer update`
 
 ## Usage
 
-When starting a new project create a new git-branch and just commit to that branch. The master branch should always be
+When starting a new project create a new git-branch and just commit to that branch. The main branch should always be
 used to start new projects.
 
 To increase quality work progress might be committed and documented. Documentation has its home in the folder
@@ -68,11 +88,10 @@ To increase quality work progress might be committed and documented. Documentati
 
 Customizations typically start by adapting the [ts constants](Configuration/TypoScript/constants.typoscript) and
 [ts setup](Configuration/TypoScript/setup.typoscript). Frequently used configurations are collected in the
-folder [`Configuration/TypoScript/Default`](Configuration/TypoScript/Default). You might use them to get started by
+folder [`Configuration/TypoScript/Sample`](Configuration/TypoScript/Sample). You might use them to get started by
 copying the needed fragments to
 [`Configuration/TypoScript/constants.typoscript`](Configuration/TypoScript/constants.typoscript) or
-[`Configuration/TypoScript/setup.typoscript`](Configuration/TypoScript/setup.typoscript). The inclusion from the default
-TS (see `@import...`) might be deleted.
+[`Configuration/TypoScript/setup.typoscript`](Configuration/TypoScript/setup.typoscript).
 
 ### CSS/SCSS
 
@@ -114,8 +133,8 @@ steps:
 2. Enable the template in the TS constant declaration
 
 ```
-user_pizpalue {
-    page.fluidtemplate {
+page {
+    fluidtemplate {
         templateRootPath = EXT:user_pizpalue/Resources/Private/Templates/Page/
     }
 }
@@ -130,9 +149,7 @@ user_pizpalue {
 
 ## Coding guidelines
 
-- Use
-  the [coding guidelines defined by TYPO3](https://docs.typo3.org/typo3cms/CoreApiReference/CodingGuidelines/Index.html)
-  .
+- Use the [coding guidelines defined by TYPO3](https://docs.typo3.org/typo3cms/CoreApiReference/CodingGuidelines/Index.html).
 - Use **up, Up, up-, upc-** as package related prefixes where `upc-` is mainly used for complementary css classes used
   together with other selectors (e.g. `.up-example .upc-red { ... }`)
 
@@ -143,7 +160,6 @@ user_pizpalue {
 - [TypoScript reference](https://docs.typo3.org/typo3cms/TyposcriptReference/)
 - [Fluid guide](https://docs.typo3.org/typo3cms/ExtbaseGuide/Fluid/)
 - [Fluid view helper reference](https://docs.typo3.org/typo3cms/ViewHelperReference/)
-- [VHS view helper reference](https://viewhelpers.fluidtypo3.org/fluidtypo3/vhs/)
 - [TCA reference](https://docs.typo3.org/typo3cms/TCAReference/)
 - [TSconfig reference](https://docs.typo3.org/typo3cms/TSconfigReference/)
 - [Core API reference](https://docs.typo3.org/typo3cms/CoreApiReference/)

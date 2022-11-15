@@ -1,10 +1,1 @@
-const upDomReady = (callback) => {
-    if (document.readyState != "loading") callback();
-    else document.addEventListener("DOMContentLoaded", callback);
-}
-
-(function ()  {
-    upDomReady(() => {
-        // Process
-    });
-})();
+// See as well EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.utility.js

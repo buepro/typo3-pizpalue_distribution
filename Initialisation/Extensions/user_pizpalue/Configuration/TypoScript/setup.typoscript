@@ -1,26 +1,7 @@
 #=========================================================#
-# Frequently used settings can be found in the Default
+# Frequently used settings can be found in the Sample
 # folder.
 #=========================================================#
-
-
-#=========================================================#
-# Lib objects
-#=========================================================#
-
-lib.contentElement {
-    layoutRootPaths {
-        30 = {$user_pizpalue.contentElement.fluidtemplate.layoutRootPath}
-    }
-
-    templateRootPaths {
-        30 = {$user_pizpalue.contentElement.fluidtemplate.templateRootPath}
-    }
-
-    partialRootPaths {
-        30 = {$user_pizpalue.contentElement.fluidtemplate.partialRootPath}
-    }
-}
 
 
 #=========================================================#
@@ -29,6 +10,8 @@ lib.contentElement {
 
 config {
     cache_clearAtMidnight = 1
+    spamProtectEmailAddresses = -1
+    spamProtectEmailAddresses_atSubst = (at)
 }
 
 
@@ -41,15 +24,6 @@ page {
     # CSS/Scss
     #---------------------------------------------------------#
     includeCSS.upGeneralScss = EXT:user_pizpalue/Resources/Public/Scss/theme.scss
-
-    #---------------------------------------------------------#
-    # Template
-    #---------------------------------------------------------#
-    10 {
-        layoutRootPaths.3 = {$user_pizpalue.page.fluidtemplate.layoutRootPath}
-        templateRootPaths.3 = {$user_pizpalue.page.fluidtemplate.templateRootPath}
-        partialRootPaths.3 = {$user_pizpalue.page.fluidtemplate.partialRootPath}
-    }
 }
 
 

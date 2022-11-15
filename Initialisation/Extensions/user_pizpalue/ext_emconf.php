@@ -8,8 +8,8 @@
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Pizpalue custom template',
-    'description' => 'Custom template being used with template pizpalue.',
+    'title' => 'Pizpalue site package',
+    'description' => 'Site package being used with template pizpalue.',
     'category' => 'templates',
     'author' => 'Roman Büchler',
     'author_email' => 'rb@buechler.pro',
@@ -18,10 +18,10 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '4.0.0',
+    'version' => '4.1.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.11-99.99.99',
+            'typo3' => '11.5.0-99.99.99',
             'pizpalue' => '14.0.0-99.99.99',
         ],
         'conflicts' => [

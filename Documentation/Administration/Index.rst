@@ -29,7 +29,7 @@ news                             9.1.0-9.99.99
 pizpalue                         14.0.0-14.99.99
 timelog                          1.7.0-1.99.99
 tt_address                       6.0.1-6.99.99
-user_pizpalue                    4.0.0-4.99.99
+user_pizpalue                    4.1.0-4.99.99
 ================================ ================
 
 Supported extensions
@@ -60,20 +60,20 @@ Follow these steps to install the distribution through the extension manager:
 Composer
 --------
 
-See `buepro/typo3-pizpalue-distribution-base <https://packagist.org/packages/
-buepro/typo3-pizpalue-distribution-base>`__.
+See `buepro/typo3-user-pizpalue <https://packagist.org/packages/
+buepro/typo3-user-pizpalue>`__.
 
 
 Customization
 =============
 
 The suggested way to customize the distribution for customer projects is to
-create an extension (e.g. user_pizpalue) and define the customer theme and
-functions in it (`see TYPO3 documentation <https://docs.typo3.org/typo3cms/
-ExtbaseFluidBook/4-FirstExtension/Index.html>`__).
+use an extension (e.g. `user_pizpalue <https://github.com/buepro/typo3-user_pizpalue>`__)
+and define the customer theme and functions in it (`see TYPO3 documentation
+<https://docs.typo3.org/typo3cms/ExtbaseFluidBook/4-FirstExtension/Index.html>`__).
 
-An example extension for that purpose is delivered and activated with the
-distribution. You might use it as your starting point.
+For legacy installations not using composer an example extension for that
+purpose is delivered and activated. You might use it as your starting point.
 
 .. figure:: ../Images/Administration/Customize.jpg
    :alt: Customize the distribution for customer projects

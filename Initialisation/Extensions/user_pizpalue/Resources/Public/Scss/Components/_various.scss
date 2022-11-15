@@ -16,25 +16,6 @@ $up-max-image-width: 2000px !default;
 }
 
 //
-// Content elements
-// --------------------------------------------------
-.pp-card-primary, .pp-card-secondary, .pp-card-complementary {
-    .card {
-        border: none;
-    }
-}
-.carousel-item-type-header, .carousel-item-type-text_and_image {
-    .carousel-header, .carousel-subheader, .carousel-text {
-        @include pp-make-text-shadow-outline();
-    }
-}
-@include media-breakpoint-down(md) {
-    .textmedia-gallery, .textpic-gallery {
-        margin-bottom: 1.7rem;
-    }
-}
-
-//
 // Forms
 // --------------------------------------------------
 .frame-type-form_formframework {
@@ -68,9 +49,6 @@ $up-max-image-width: 2000px !default;
 // Social links
 // NOTE: The bootstrap package uses the class footer-sociallinks for further styling
 // --------------------------------------------------
-:root {
-    --up-sociallinks-size: 1.25rem;
-}
 .sociallinks-link-icon {
     font-size: var(--up-sociallinks-size);
     width: var(--up-sociallinks-size);
@@ -107,4 +85,11 @@ $up-max-image-width: 2000px !default;
     .text-muted img {
         filter: grayscale(1);
     }
+}
+
+//
+// Cookie dialog
+//
+#cookieconsent .cc-revoke {
+    padding: 0 0.5rem;
 }

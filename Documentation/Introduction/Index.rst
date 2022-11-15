@@ -19,10 +19,16 @@ The web site features everything needed for private or corporate use. It is
 tailored to the Swiss market featuring German as default language and additional
 translations to French, English and Finnish.
 
-This distribution mainly provides the pages and content of the website and its
-configuration. The functionality is primarily provided by the `extension
-pizpalue <https://extensions.typo3.org/extension/pizpalue>`__, which provides
-new features and complements other extensions.
+This distribution mainly provides the pages and content of the website.
+The functionality is primarily provided by the
+`extension pizpalue <https://extensions.typo3.org/extension/pizpalue>`__,
+which provides new features and complements other extensions.
+
+Website customizations mostly are carried out in a separate extension as well
+referred to as site package. A site package making use of this distribution
+is available at `github.com/buepro/typo3-user_pizpalue <https://github.com/buepro/typo3-user_pizpalue>`__.
+It is as well installed together with this distribution on legacy installations
+not using composer.
 
 The following extensions complement this distribution:
 
@@ -41,12 +47,12 @@ pizpalue.buechler.pro/>`__.
 Version overview
 ================
 
-========  ===============
-Version   TYPO3 version
-========  ===============
-3.x       11.x
-2.x       10.x
-========  ===============
+================  ===============
+Version           TYPO3 version
+================  ===============
+3.x / 4.x         11.x
+2.x               10.x
+================  ===============
 
 Screenshots
 ===========

@@ -42,7 +42,7 @@
 		"typo3/cms-redirects": "^11.5"
 	},
 	"require-dev": {
-		"buepro/typo3-user-pizpalue": "~4.0.0 || dev-main || dev-pizpalue || dev-demo || dev-customer",
+		"buepro/typo3-user-pizpalue": "~4.1.0 || dev-main || dev-pizpalue || dev-demo || dev-customer",
 		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.8.1",
