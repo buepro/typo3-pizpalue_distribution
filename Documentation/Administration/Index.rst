@@ -23,13 +23,9 @@ The following extensions will be installed with the distribution:
 ================================ ================
 Extension                        Version
 ================================ ================
-container_elements               4.0.0-4.99.99
-eventnews                        5.0.0
-news                             9.1.0-9.99.99
-pizpalue                         14.0.0-14.99.99
-timelog                          1.7.0-1.99.99
-tt_address                       6.0.1-6.99.99
-user_pizpalue                    4.1.0-4.99.99
+container_elements               5.0.0-5.99.99
+pizpalue                         15.0.0-15.99.99
+user_pizpalue                    5.0.0-5.99.99
 ================================ ================
 
 Supported extensions
