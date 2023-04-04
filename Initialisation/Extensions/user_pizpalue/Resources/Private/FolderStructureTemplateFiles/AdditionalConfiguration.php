@@ -14,7 +14,7 @@
 //$GLOBALS['TYPO3_CONF_VARS']['BE']['lockSSL'] = true;
 
 // Don't log php warnings (see https://forge.typo3.org/issues/98330)
-//$GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = 30709;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = 30709;
 
 /**
  * Disables logging in production context

@@ -42,9 +42,9 @@ defined('TYPO3') || die('Access denied.');
     /**
      * User TSconfig
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
-        '@import "EXT:user_pizpalue/Configuration/TsConfig/User/*.tsconfig"'
-    );
+//    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
+//        '@import "EXT:user_pizpalue/Configuration/TsConfig/User/*.tsconfig"'
+//    );
     if ((int)$GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] === 1) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
             '@import "EXT:user_pizpalue/Configuration/TsConfig/Debug/User.tsconfig"'

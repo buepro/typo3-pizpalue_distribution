@@ -187,8 +187,8 @@ page {
 # Font
 #=========================================================#
 
-# Define loaded google fonts manually
-pizpalue.style.googleFontsUrl = https://fonts.googleapis.com/css?display=swap&family=Source+Sans+Pro:300,400,700|Dancing+Script:400
+# Add different google font for headings
+pizpalue.style.googleFontsUrlHeadingsSegment = |Dancing+Script:400
 
 page.theme.googleFont {
     enable = 1
@@ -304,8 +304,8 @@ page.logo {
     height = 140
     width = 390
     fileInverted = EXT:user_pizpalue/Resources/Public/Images/logo_inv.svg
-    alt = {$pizpalue.customer.commonName}
-    linktitle = {$pizpalue.customer.commonName}
+    alt = {$pizpalue.customer.company}
+    linktitle = {$pizpalue.customer.company}
 }
 
 
