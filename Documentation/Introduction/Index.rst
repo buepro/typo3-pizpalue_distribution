@@ -32,13 +32,17 @@ not using composer.
 
 The following extensions complement this distribution:
 
--  `easyconf <https://extensions.typo3.org/extension/easyconf>`__, website configuration for non technical audience
+-  `easyconf <https://extensions.typo3.org/extension/easyconf>`__, website
+   configuration for non technical audience
 -  `container_elements <https://extensions.typo3.org/extension/container_elements>`__,
    structure elements
 -  `news <https://extensions.typo3.org/extension/news>`__, news system
-- `eventnews <https://extensions.typo3.org/extension/eventnews>`__, news system
+- `eventnews <https://extensions.typo3.org/extension/eventnews>`__, event system
+   (not available yet)
 - `tt_address <https://extensions.typo3.org/extension/tt_address>`__, address lists
-- `timelog <https://extensions.typo3.org/extension/timelog>`__, time and activity registration for projects
+   (not available yet)
+- `timelog <https://extensions.typo3.org/extension/timelog>`__, time and activity
+   registration for projects (not available yet)
 
 
 Discover the functionality by browsing through the `demo site <https://www.
@@ -50,6 +54,7 @@ Version overview
 ================ ===============
 Version          TYPO3 version
 ================ ===============
+6.x              12.x
 3.x / 4.x / 5.x  11.x
 2.x              10.x
 ================ ===============
