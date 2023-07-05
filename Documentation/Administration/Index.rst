@@ -26,6 +26,7 @@ Extension                        Version
 container_elements               5.0.0-5.99.99
 news                             11.0.0-11.99.99
 pizpalue                         15.0.0-15.99.99
+tt_address                       8.0.1-8.99.99
 user_pizpalue                    5.0.0-5.99.99
 ================================ ================
 
