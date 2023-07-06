@@ -24,18 +24,20 @@
 		"issues": "https://github.com/buepro/typo3-user_pizpalue/issues",
 		"source": "https://github.com/buepro/typo3-user_pizpalue"
 	},
+	"prefer-stable": true,
 	"require": {
 		"buepro/typo3-container-elements": "^5.0.0",
 		"buepro/typo3-easyconf": "^2.0.0",
 		"buepro/typo3-pizpalue": "^15.0.0",
-		"buepro/typo3-pizpalue-distribution": "^6.0.0",
+		"buepro/typo3-pizpalue-distribution": "^6.1.0@dev",
+		"friendsoftypo3/tt-address": "^8.0.1",
 		"georgringer/news": "^11.0.0",
-		"typo3/cms-base-distribution": "^12.3",
-		"typo3/cms-core": "^12.3",
-		"typo3/cms-indexed-search": "^12.2",
-		"typo3/cms-lowlevel": "^12.3",
-		"typo3/cms-recycler": "^12.3",
-		"typo3/cms-redirects": "^12.3"
+		"typo3/cms-base-distribution": "^12.4",
+		"typo3/cms-core": "^12.4",
+		"typo3/cms-indexed-search": "^12.4",
+		"typo3/cms-lowlevel": "^12.4",
+		"typo3/cms-recycler": "^12.4",
+		"typo3/cms-redirects": "^12.4"
 	},
 	"autoload": {
 		"psr-4": {
@@ -55,7 +57,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "5.0.x-dev"
+			"dev-main": "5.1.x-dev"
 		},
 		"typo3/cms": {
 			"extension-key": "user_pizpalue",

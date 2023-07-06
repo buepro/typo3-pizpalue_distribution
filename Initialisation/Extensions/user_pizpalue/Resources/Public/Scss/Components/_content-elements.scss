@@ -29,3 +29,25 @@
     --pp-frame-headings-color: var(--thumbnailmenu-color);
     --frame-link-hover-color: var(--thumbnailmenu-color);
 }
+
+//
+// Container tabs
+//
+.frame-type-ce_tabs:not(.frame-background-none) {
+    .nav-tabs {
+        --bs-nav-tabs-border-color: rgba(var(--frame-color-rgb), 0.3);
+        --bs-nav-tabs-link-active-bg: rgba(255, 255, 255, 0.7);
+        --bs-nav-tabs-link-active-border-color: var(--bs-nav-tabs-border-color);
+        --bs-nav-tabs-link-hover-border-color: var(--bs-nav-tabs-border-color);
+        --bs-nav-link-color: rgba(var(--frame-color-rgb), 0.8);
+        .nav-link {
+            &:not(.active):hover {
+                color: var(--frame-color-rgb);
+                border-bottom-color: transparent;
+            }
+            &.active {
+                border-bottom-color: var(--frame-background);
+            }
+        }
+    }
+}

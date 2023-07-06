@@ -64,7 +64,7 @@ The following steps set up a TYPO3 website using this package as a composer root
        ```
        "config": {
          "platform": {
-           "php": "8.1.9"
+           "php": "8.2.6"
          }
        }
        ```
