@@ -202,6 +202,7 @@ plugin.bootstrap_package {
             font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
             font-family-monospace = SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
             font-family-base = "#{$google-webfont}", sans-serif
+            font-size-root = 18px
             font-size-base = 1rem
             font-size-lg = $font-size-base * 1.25
             font-size-sm = $font-size-base * .875
@@ -333,7 +334,6 @@ page.theme {
             twitter.url = https://twitter.com/typo3
             instagram.url = https://www.instagram.com/
             github.url = https://github.com/buepro/typo3-pizpalue
-            googleplus.url =
             linkedin.url = https://www.linkedin.com/
             xing.url = https://www.xing.com/
             youtube.url = https://www.youtube.com/user/typo3

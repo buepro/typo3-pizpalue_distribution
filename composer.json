@@ -39,7 +39,7 @@
 		"typo3/cms-redirects": "^12.4"
 	},
 	"require-dev": {
-		"buepro/typo3-user-pizpalue": "~5.0.0 || dev-main || dev-pizpalue || dev-demo || dev-customer",
+		"buepro/typo3-user-pizpalue": "~6.0.0 || dev-main || dev-pizpalue || dev-demo || dev-customer",
 		"ergebnis/composer-normalize": "^2.18.0",
 		"friendsofphp/php-cs-fixer": "^3.14",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",

@@ -1,0 +1,25 @@
+//
+// Subnavigation and Subnavigation 2 Columns
+// --------------------------------------------------
+@include media-breakpoint-down('lg') {
+    .backendlayout-subnavigation_right,
+    .backendlayout-subnavigation_left,
+    .backendlayout-subnavigation_right_2_columns,
+    .backendlayout-subnavigation_left_2_columns {
+        .frame-type-subnavigation {
+            margin-top: calc(-1 * var(--pp-frame-spacing));
+        }
+        .subnav-wrap {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .subnav-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+        .subnav-item {
+            margin-top: 0;
+        }
+    }
+}

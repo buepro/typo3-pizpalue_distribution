@@ -89,28 +89,7 @@ $up-max-image-width: 2000px !default;
 
 //
 // Cookie dialog
-//
-#cookieconsent .cc-revoke {
+// --------------------------------------------------
+#cookieconsent .cc-revoke:not(.cc-animate) {
     padding: 0 0.5rem;
-}
-
-//
-// Side navigation
-// TODO: Remove once implemented in pizpalue (ref 1686646383)
-//
-@include media-breakpoint-down (lg) {
-    .backendlayout-subnavigation_right, .backendlayout-subnavigation_left {
-        .subnav-wrap {
-            display: block;
-            margin-bottom: calc(-1 * var(--pp-frame-spacing));
-        }
-        .subnav-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.3rem;
-        }
-        .subnav-item + .subnav-item {
-            margin-top: 0;
-        }
-    }
 }

@@ -22,15 +22,15 @@ defined('TYPO3') || die('Access denied.');
     /**
      * Extension configuration
      */
-//    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-//        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
-//    );
-//    $userPizpalueConfiguration = $extensionConfiguration->get('user_pizpalue');
+    //    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+    //        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+    //    );
+    //    $userPizpalueConfiguration = $extensionConfiguration->get('user_pizpalue');
 
     /**
      * Register icons
      */
-//    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    //    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
     /**
      * Page TSconfig
@@ -42,9 +42,9 @@ defined('TYPO3') || die('Access denied.');
     /**
      * User TSconfig
      */
-//    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
-//        '@import "EXT:user_pizpalue/Configuration/TsConfig/User/*.tsconfig"'
-//    );
+    //    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
+    //        '@import "EXT:user_pizpalue/Configuration/TsConfig/User/*.tsconfig"'
+    //    );
     if ((int)$GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] === 1) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
             '@import "EXT:user_pizpalue/Configuration/TsConfig/Debug/User.tsconfig"'
@@ -54,8 +54,8 @@ defined('TYPO3') || die('Access denied.');
     /**
      * Adjust RTE
      */
-//    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['user_pizpalue'] = 'EXT:user_pizpalue/Configuration/RTE/Default.yaml';
-//    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = user_pizpalue');
+    //    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['user_pizpalue'] = 'EXT:user_pizpalue/Configuration/RTE/Default.yaml';
+    //    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = user_pizpalue');
 
     /**
      * EXT:form
